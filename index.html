@@ -353,6 +353,115 @@ details.more .more-body p { margin: .4em 0; }
   details.more > .more-body { display: block; }
 }
 
+
+/* ── Extindere: carieră, recuperarea investiției, rute alternative, rezumat pentru părinți ── */
+.steps-grid { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1100px) { .steps-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); } }
+@media (max-width: 860px) { .nav a:not(.btn) { display: none; } }
+
+.domain-opt .d-sal { font-weight: 600; color: var(--ink); font-size: .8rem; }
+.domain-opt .d-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.domain-opt .d-tags i { font-style: normal; font-size: .74rem; font-weight: 800; padding: .15em .6em; border-radius: 99px; }
+.d-tags .ok { background: var(--teal-soft); color: #08756a; }
+.d-tags .no { background: var(--amber-soft); color: #8a5800; }
+.tag-level { background: var(--navy); color: #fff; }
+
+.roi { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 18px; margin-top: 14px; border-top: 1px dashed var(--line); padding-top: 14px; }
+.roi > * { min-width: 0; }
+.roi-item { font-size: .9rem; font-weight: 700; color: var(--navy); }
+.roi-item b { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 2px; }
+.roi-item small { display: block; font-weight: 500; color: var(--muted); font-size: .8rem; margin-top: 3px; }
+
+.parent-panel { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px 22px; margin-bottom: 24px; }
+.parent-panel h3 { font: 800 1.1rem var(--font-body); }
+.parent-panel p { margin: 0 0 12px; color: var(--muted); font-size: .92rem; max-width: 75ch; }
+.parent-panel textarea { width: 100%; font: 500 .88rem/1.55 var(--font-body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 14px; resize: vertical; }
+.parent-panel textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.parent-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 12px; }
+#copy-status { font-size: .88rem; font-weight: 700; color: var(--teal); }
+
+.paper { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: .94rem; }
+.r-grid .r-note { margin-top: 10px; font-size: .88rem; color: var(--muted); }
+
+.routes-title { font-size: 1.4rem; margin: 48px 0 4px; }
+.routes-grid, .day-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px 28px; margin-top: 22px; }
+.routes-grid > *, .day-grid > * { min-width: 0; }
+.route { border-top: 2px solid var(--navy); padding-top: 14px; }
+.route h4 { font: 800 1.02rem var(--font-body); color: var(--navy); margin: 0 0 6px; }
+.route p { margin: 0; font-size: .93rem; color: var(--muted); }
+.day-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+.day-time { font: 700 1.5rem var(--font-display); color: var(--accent-dark); font-variant-numeric: tabular-nums; }
+.day-card h3 { font-size: 1.1rem; margin: 8px 0 6px; }
+.day-card p { margin: 0; color: var(--muted); font-size: .93rem; }
+@media (max-width: 800px) { .routes-grid, .day-grid, .roi { grid-template-columns: 1fr; } }
+.options.pair { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
+
+/* ── Catalog, Lista mea, comparație, burse, calendar ── */
+.heart { border: 1.5px solid var(--line); background: #fff; color: var(--navy); border-radius: 99px; padding: .35em .9em; font: 700 .82rem var(--font-body); cursor: pointer; white-space: nowrap; }
+.heart:hover { border-color: var(--accent); }
+.heart.on { background: #fff6f1; border-color: var(--accent); color: var(--accent-dark); }
+.heart:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.prog-top .heart { margin-top: 10px; }
+
+.cat-filters { display: grid; grid-template-columns: 2fr repeat(4, 1fr); gap: 10px; margin-top: 22px; }
+.cat-filters > * { min-width: 0; }
+.cat-filters input, .cat-filters select, .sch-filter select {
+  width: 100%; font: 600 .95rem var(--font-body); color: var(--ink); background: #fff;
+  border: 1.5px solid var(--line); border-radius: 12px; padding: .7em .9em;
+}
+.cat-filters input:focus-visible, .cat-filters select:focus-visible, .sch-filter select:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.cat-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.cat-card h3 { font: 800 1.02rem var(--font-body); color: var(--navy); margin: 4px 0 0; }
+.cat-card .uni { margin: 0; font-size: .9rem; font-weight: 600; }
+.cat-card .badges { margin-top: 4px; }
+.cat-fee { margin: 0; font-size: .85rem; color: var(--muted); }
+.cat-fee b { color: var(--ink); }
+.cat-actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; padding-top: 10px; font-size: .88rem; font-weight: 700; }
+.cat-more-wrap { text-align: center; margin-top: 18px; }
+
+.saved-bar {
+  position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 70;
+  display: flex; align-items: center; gap: 14px; background: var(--navy); color: #fff; border-radius: 99px;
+  padding: 8px 8px 8px 20px; box-shadow: 0 12px 30px rgba(23, 37, 84, .35); font-weight: 700; font-size: .92rem; max-width: calc(100% - 32px);
+}
+.saved-bar .btn { padding: .6em 1.2em; }
+.saved-bar span { white-space: nowrap; }
+.saved-bar .btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+
+.compare-section { padding-top: 40px; }
+.cmp-wrap { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: 18px; }
+.cmp { width: 100%; border-collapse: collapse; min-width: 720px; font-size: .88rem; }
+.cmp th, .cmp td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.cmp thead th { background: var(--bg); }
+.cmp tbody th { color: var(--muted); font-size: .76rem; text-transform: uppercase; letter-spacing: .06em; width: 150px; }
+.cmp-name { display: block; font: 800 .95rem var(--font-body); color: var(--navy); }
+.cmp-uni { display: block; font-weight: 600; color: var(--muted); font-size: .82rem; margin: 2px 0 8px; }
+.cmp td { font-variant-numeric: tabular-nums; }
+
+.sch-filter { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--navy); margin: 18px 0; }
+.sch-filter select { width: auto; }
+.sch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin-top: 16px; }
+.sch { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.sch.nu { opacity: .78; }
+.sch-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.sch h4 { font: 800 1rem var(--font-body); color: var(--navy); margin: 4px 0 0; }
+.sch p { margin: 0; font-size: .9rem; }
+.sch-amt { font-weight: 700; color: var(--teal) !important; }
+.sch a { font-size: .86rem; font-weight: 700; margin-top: auto; }
+
+.tl { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 14px; }
+.tl > li { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px 18px; }
+.tl h4 { font: 800 .82rem var(--font-body); text-transform: uppercase; letter-spacing: .08em; color: var(--accent-dark); margin: 0 0 8px; }
+.tl ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.tl ul li { display: flex; align-items: baseline; gap: 10px; font-size: .92rem; }
+.tl-day { flex: 0 0 28px; font: 700 1.05rem var(--font-display); color: var(--navy); font-variant-numeric: tabular-nums; }
+.tl .flag { align-self: center; }
+
+@media (max-width: 900px) { .cat-filters { grid-template-columns: 1fr 1fr; } .cat-search { grid-column: 1 / -1; } }
+@media (max-width: 520px) { .cat-filters { grid-template-columns: 1fr; } .saved-bar { padding-left: 14px; gap: 10px; } }
+
 </style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23172554'/><path d='M14 28l18-9 18 9-18 9z' fill='%23ff7a45'/><path d='M22 33v8c0 3 5 6 10 6s10-3 10-6v-8' fill='none' stroke='%23fff' stroke-width='3'/></svg>">
 </head>
@@ -365,6 +474,8 @@ details.more .more-body p { margin: .4em 0; }
       </a>
       <nav class="nav" aria-label="Navigare principală">
         <a href="#cum">Cum funcționează</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#burse">Burse</a>
         <a href="#tari">Țări</a>
         <a href="#premium">Premium</a>
         <a href="#quiz" class="btn btn-small" data-start>Începe testul</a>
@@ -378,15 +489,16 @@ details.more .more-body p { margin: .4em 0; }
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Consiliere vocațională · clasele a XI-a și a XII-a</p>
-          <h1>Facultatea potrivită pentru tine, în România, în <span class="hl">Europa</span> sau în SUA.</h1>
-          <p class="lead">Răspunzi la câteva întrebări despre profilul tău, materiile preferate, note, buget și țară. Primești o listă de universități publice, cu șansele tale de admitere, modul de intrare (dosar sau examen), locurile la buget și la taxă și bursele disponibile.</p>
+          <h1>Facultatea potrivită pentru tine, în România, în <span class="hl">Europa</span> sau peste ocean.</h1>
+          <p class="lead">Răspunzi la câteva întrebări despre profilul tău, materiile preferate, note, buget și țară. Primești o listă de programe la instituții publice, cu șansele tale de admitere, modul de intrare (dosar sau examen), locurile la buget și la taxă, bursele disponibile, salariul estimat după absolvire și în cât timp îți recuperezi investiția.</p>
           <div class="hero-cta">
             <a href="#quiz" class="btn btn-primary" data-start>Începe chestionarul <span aria-hidden="true">→</span></a>
             <span class="hint">≈ 5 minute · gratuit · fără cont</span>
           </div>
           <ul class="hero-stats">
-            <li><strong>7</strong> țări</li>
-            <li><strong id="stat-programs">60</strong> programe analizate</li>
+            <li><strong id="stat-countries">15</strong> țări</li>
+            <li><strong id="stat-programs">130</strong> programe analizate</li>
+            <li><strong id="stat-scholarships">25</strong> burse explicate</li>
             <li><strong>2026</strong> date de admitere</li>
           </ul>
         </div>
@@ -417,8 +529,9 @@ details.more .more-body p { margin: .4em 0; }
         <ol class="steps-grid">
           <li><span class="step-num">1</span><h3>Profil &amp; materii</h3><p>Profilul de la liceu și materiile care îți plac.</p></li>
           <li><span class="step-num">2</span><h3>Note &amp; examene</h3><p>Media de admitere la liceu, mediile din liceu, bacul și, dacă vrei, Cambridge, SAT sau olimpiade.</p></li>
-          <li><span class="step-num">3</span><h3>Domenii sugerate</h3><p>Îți propunem domenii potrivite, iar tu le alegi pe cele care te atrag.</p></li>
-          <li><span class="step-num">4</span><h3>Buget &amp; țară</h3><p>Cât poți plăti pe an și unde vrei să studiezi.</p></li>
+          <li><span class="step-num">3</span><h3>Carieră</h3><p>Opțional: salariul pe care îl țintești, programul de lucru dorit și tipul de studii.</p></li>
+          <li><span class="step-num">4</span><h3>Domenii sugerate</h3><p>Îți propunem domenii potrivite, cu salarii estimate, iar tu le alegi pe cele care te atrag.</p></li>
+          <li><span class="step-num">5</span><h3>Buget &amp; țară</h3><p>Cât poți plăti pe an și unde vrei să studiezi.</p></li>
         </ol>
       </div>
     </section>
@@ -446,12 +559,67 @@ details.more .more-body p { margin: .4em 0; }
     <!-- REZULTATE -->
     <section id="results" class="section results-section" hidden></section>
 
+    <!-- COMPARAȚIE -->
+    <section id="compare" class="section compare-section" hidden></section>
+
+    <!-- CATALOG -->
+    <section id="catalog" class="section">
+      <div class="wrap">
+        <p class="eyebrow">Catalog</p>
+        <h2 class="section-title">Caută direct printre toate programele</h2>
+        <p class="section-sub">Știi deja ce vrei? Caută după universitate, oraș sau program, filtrează după țară, domeniu, tip de studii și taxă, apoi salvează-le pe cele care îți plac în „Lista mea” și compară-le.</p>
+        <div class="cat-filters">
+          <label class="cat-search"><span class="sr-only">Caută</span><input id="cat-q" type="search" placeholder="Caută: medicină, Cluj, TU Delft, informatică…" autocomplete="off"></label>
+          <label><span class="sr-only">Țara</span><select id="cat-country"></select></label>
+          <label><span class="sr-only">Domeniul</span><select id="cat-domain"></select></label>
+          <label><span class="sr-only">Tipul de studii</span><select id="cat-level"></select></label>
+          <label><span class="sr-only">Taxa</span><select id="cat-fee"></select></label>
+        </div>
+        <p class="res-count" id="cat-count" role="status"></p>
+        <div class="cat-grid" id="cat-list"></div>
+        <div class="cat-more-wrap"><button type="button" class="btn btn-ghost" id="cat-more">Arată mai multe</button></div>
+      </div>
+    </section>
+
     <!-- ȚĂRI -->
     <section id="tari" class="section section-alt">
       <div class="wrap">
         <h2 class="section-title">Unde poți studia</h2>
-        <p class="section-sub">În Europa ne concentrăm pe universitățile <strong>publice</strong>, unde taxele pentru cetățenii UE sunt mici sau zero. În SUA am inclus 4 universități publice de top și MIT, care oferă ajutor financiar complet și studenților internaționali.</p>
+        <p class="section-sub">În Europa ne concentrăm pe universitățile <strong>publice</strong>, unde taxele pentru cetățenii UE sunt mici sau zero. Peste ocean am inclus universități publice de top din SUA și Canada, plus MIT, care oferă ajutor financiar complet și studenților internaționali.</p>
         <div class="country-grid" id="country-grid"></div>
+
+        <h3 class="routes-title">Nu doar facultate</h3>
+        <p class="section-sub">Pe lângă licență, găsești și drumuri mai scurte sau mai practice spre o meserie.</p>
+        <div class="routes-grid">
+          <div class="route"><h4>Școli postliceale</h4><p>1,5–3 ani, la stat, fără taxă. De exemplu asistent medical generalist, calificare recunoscută în UE. La multe te poți înscrie și fără diplomă de bacalaureat.</p></div>
+          <div class="route"><h4>Programe duale</h4><p>Facultate și muncă la o companie, în paralel. Primești salariu sau bursă pe durata studiilor și ai, de regulă, un job la final. În România și în Germania.</p></div>
+          <div class="route"><h4>Științe aplicate</h4><p>Universitățile practice din Olanda (HBO): 4 ani în engleză, cu stagiu în companie inclus și admitere mai accesibilă decât la universitățile de cercetare.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BURSE -->
+    <section id="burse" class="section">
+      <div class="wrap">
+        <p class="eyebrow">Burse</p>
+        <h2 class="section-title">Burse și sprijin financiar, pe înțeles</h2>
+        <p class="section-sub">Nu doar o listă: la fiecare bursă îți spunem dacă un elev din România e eligibil, ce trebuie verificat sau de ce nu se aplică. După chestionar, verdictul ține cont și de răspunsurile tale.</p>
+        <label class="sch-filter">Țara <select id="sch-country"></select></label>
+        <div id="sch-list"></div>
+      </div>
+    </section>
+
+    <!-- O ZI DE STUDENT -->
+    <section id="zi-de-student" class="section">
+      <div class="wrap">
+        <p class="eyebrow">În curând</p>
+        <h2 class="section-title">O zi din viața unui student</h2>
+        <p class="section-sub">Cifrele nu spun totul. Pregătim clipuri scurte, filmate chiar de studenți, în care vezi cum arată o zi obișnuită la facultatea lor. Lucrăm cu facultățile ca primele clipuri să apară lângă programele din rezultate.</p>
+        <div class="day-grid">
+          <div class="day-card"><span class="day-time">08:00</span><h3>Cursuri și laboratoare</h3><p>Cum arată sălile, cât de plin e orarul și cum predau profesorii.</p></div>
+          <div class="day-card"><span class="day-time">13:00</span><h3>Campus și cantină</h3><p>Unde mănânci, unde înveți și cât te costă o zi obișnuită.</p></div>
+          <div class="day-card"><span class="day-time">19:00</span><h3>Cămin și timp liber</h3><p>Cum se locuiește, ce faci după cursuri și cum e orașul pentru un student.</p></div>
+        </div>
       </div>
     </section>
 
@@ -467,7 +635,7 @@ details.more .more-body p { margin: .4em 0; }
             <li><b>Calculează exact costul vieții.</b> Pornește de la orașul tău și stilul tău de viață: chirie, utilități, mâncare, transport, asigurare, telefon, materiale și cursul valutar. Primești un buget lunar și anual personalizat, plus cât poți câștiga legal dintr-un job part-time.</li>
             <li><b>Îți crește șansele de admitere.</b> Analizează programul ales și îți face un plan pas cu pas: ce examene să susții și ce scor să țintești, ce materii să aprofundezi, cum să scrii scrisoarea de motivație sau eseurile, ce activități contează, plus simulări de grile și de interviu.</li>
             <li><b>Ține evidența termenelor.</b> Calendar personal cu toate datele de aplicare, examenele de limbă, documentele și traducerile necesare, cu memento-uri înainte de fiecare termen.</li>
-            <li><b>Verifică dosarul.</b> Îți spune ce lipsește din dosar și ce trebuie tradus sau legalizat pentru fiecare țară.</li>
+            <li><b>Birocrație, mură-n gură.</b> Pentru fiecare țară primești lista completă de acte, în ordinea în care trebuie făcute: ce se traduce și ce se legalizează, unde se depune fiecare document, modele de cereri și ce ai de făcut după ce ajungi (înregistrarea adresei, contul bancar, asigurarea de sănătate, viza de student pentru SUA). Ariadna îți verifică dosarul și îți spune ce lipsește.</li>
           </ul>
         </div>
         <div class="premium-card">
@@ -480,6 +648,7 @@ details.more .more-body p { margin: .4em 0; }
               <li>Plan de admitere pentru până la 5 facultăți</li>
               <li>Căutare de cazare și buget lunar personalizat</li>
               <li>Calendar de termene cu memento-uri</li>
+              <li>Birocrație pas cu pas, pentru fiecare țară</li>
             </ul>
             <button type="button" class="btn btn-primary btn-block" id="premium-cta">Vreau acces la Ariadna</button>
             <p class="plan-soon" id="premium-msg" hidden>Ariadna se lansează în curând. Mulțumim pentru interes! Accesul anticipat se deschide mai întâi pentru elevii de clasa a XII-a.</p>
@@ -503,11 +672,17 @@ details.more .more-body p { margin: .4em 0; }
     <div class="wrap footer-inner">
       <div>
         <div class="logo logo-footer"><span>UniFinder <em>Global</em></span></div>
-        <p>Instrument orientativ de consiliere vocațională. Cifrele de școlarizare provin din documentele oficiale publicate în 2026, iar pragurile și șansele sunt estimări. Înainte să aplici, verifică întotdeauna regulamentul de admitere al universității.</p>
+        <p>Instrument orientativ de consiliere vocațională. Cifrele de școlarizare provin din documentele oficiale publicate în 2026, iar pragurile, șansele, salariile și calculul de recuperare a investiției sunt estimări. Înainte să aplici, verifică întotdeauna regulamentul de admitere al universității.</p>
       </div>
       <p class="copy">© 2026 UniFinder Global</p>
     </div>
   </footer>
+
+  <!-- bara „Lista mea” -->
+  <div class="saved-bar" id="saved-bar" hidden>
+    <span id="saved-count"></span>
+    <button type="button" class="btn btn-primary" id="saved-compare" data-act="open-compare">Compară</button>
+  </div>
 
   <script>
 /* UniFinder Global — baza de date
@@ -1189,14 +1364,882 @@ const SOURCES = [
   ["Common App", "https://www.commonapp.org"]
 ];
 
+
+/* ═════════ Extindere (noiembrie 2026): carieră, recuperarea investiției, rute alternative, birocrație ═════════ */
+
+/* Salarii nete lunare ESTIMATE în România (lei), la început de carieră și după ~5 ani.
+   Sunt repere orientative, construite pornind de la date publice din 2026 (salariul mediu net pe economie
+   5.684 lei în mai 2026; media netă în IT ~8.000 lei; inginerie ~6.000 lei; medic rezident ~4.200–4.900 lei
+   net de bază, mai mult cu sporuri și gărzi; profesor debutant ~3.500–4.800 lei net).
+   work: stiluri de lucru tipice — fix (program fix), flex (flexibil / de acasă), ture (ture, gărzi), teren. */
+const CAREER = {
+  it:    { start: 5500, five: 11000, work: ["flex"] },
+  eng:   { start: 4800, five: 8000,  work: ["fix", "teren"] },
+  med:   { start: 5500, five: 12000, work: ["ture"], note: "Începutul înseamnă rezidențiat (3–6 ani după cei 6 ani de facultate)." },
+  sci:   { start: 4200, five: 7000,  work: ["fix", "flex"] },
+  bio:   { start: 3800, five: 6000,  work: ["fix", "teren"] },
+  econ:  { start: 4300, five: 7500,  work: ["fix", "flex"] },
+  law:   { start: 4000, five: 9000,  work: ["fix"], note: "Veniturile variază mult: avocatură, magistratură sau consultanță." },
+  psy:   { start: 3600, five: 6000,  work: ["flex"] },
+  pol:   { start: 3900, five: 6500,  work: ["fix", "teren"] },
+  comm:  { start: 3700, five: 6000,  work: ["flex", "teren"] },
+  lang:  { start: 3800, five: 5800,  work: ["flex"] },
+  hum:   { start: 3600, five: 5200,  work: ["fix"] },
+  soc:   { start: 3600, five: 5500,  work: ["fix", "teren"] },
+  arch:  { start: 3900, five: 7000,  work: ["flex", "teren"] },
+  arts:  { start: 3300, five: 5000,  work: ["flex"] },
+  edu:   { start: 4200, five: 5500,  work: ["fix"], note: "Program scurt la catedră și vacanțe școlare." },
+  sport: { start: 3600, five: 5500,  work: ["flex", "teren"] }
+};
+
+const WORK_STYLES = [
+  { id: "fix", label: "Program fix", sub: "birou sau instituție, ore clare" },
+  { id: "flex", label: "Flexibil sau de acasă", sub: "program liber, lucru remote" },
+  { id: "ture", label: "Ture sau gărzi", sub: "nu mă deranjează nopțile și weekendurile" },
+  { id: "teren", label: "Teren și deplasări", sub: "nu vreau să stau doar la birou" }
+];
+
+const LEVELS = {
+  licenta: { label: "Licență", sub: "universitate, 3–6 ani" },
+  postliceal: { label: "Școală postliceală", sub: "1,5–3 ani, calificare rapidă; se poate și fără bac" },
+  dual: { label: "Program dual", sub: "facultate + practică plătită la o companie" },
+  aplicat: { label: "Științe aplicate", sub: "universități practice (HBO, Olanda), cu stagiu inclus" }
+};
+
+/* Repere economice pe țară: cost de trai lunar (mijlocul intervalului), luni plătite pe an
+   și raportul aproximativ dintre salariul net de început din țara respectivă și cel din România. */
+Object.assign(COUNTRIES.RO, { livingEUR: 600,  months: 10, salaryFactor: 1 });
+Object.assign(COUNTRIES.NL, { livingEUR: 1300, months: 12, salaryFactor: 2.9 });
+Object.assign(COUNTRIES.DE, { livingEUR: 1100, months: 12, salaryFactor: 2.8 });
+Object.assign(COUNTRIES.ES, { livingEUR: 1000, months: 12, salaryFactor: 1.8 });
+Object.assign(COUNTRIES.NO, { livingEUR: 1500, months: 12, salaryFactor: 3.4 });
+Object.assign(COUNTRIES.SE, { livingEUR: 1150, months: 12, salaryFactor: 2.6 });
+Object.assign(COUNTRIES.US, { livingEUR: 1850, months: 12, salaryFactor: 4.5 });
+
+/* Durata studiilor, în ani (implicit: 3; Spania și SUA: 4) */
+const YEARS = {
+  "ub-drept": 4, "ub-ti": 4, "upb-acs": 4, "upb-etti": 4, "upb-aero": 4, "upb-robot": 4, "upb-energ": 4,
+  "upb-bio": 4, "upb-fils": 4, "upb-aima": 4, "umfcd-med": 6, "umfcd-stoma": 6, "umfiasi-med": 6, "uauim-arh": 6,
+  "de-rwth-mb": 3.5, "de-hd-med": 6, "es-ub-med": 6, "se-kth-dt": 5
+};
+const yearsOf = p => p.years || YEARS[p.id] || (p.country === "ES" || p.country === "US" ? 4 : 3);
+
+/* ───────── Rute alternative: școli postliceale, programe duale, universități de științe aplicate ───────── */
+PROGRAMS.push(
+  { id: "ro-pl-fundeni", level: "postliceal", country: "RO", city: "București", uni: "Școala Postliceală Sanitară „Fundeni”", fac: "Școală postliceală de stat",
+    program: "Asistent medical generalist", domains: ["med"], lang: "ro", method: "examen", years: 3, noBac: true,
+    methodText: "Școală postliceală sanitară de stat. Admiterea se face prin concurs (de regulă test din biologie – anatomia și fiziologia omului). Se pot înscrie absolvenții de liceu, cu sau fără diplomă de bacalaureat. Din 2026–2027 pregătirea are 4.600 de ore în 3 ani, aliniată cerințelor europene, deci calificarea este recunoscută în UE.",
+    places: null, verified: false, feeEUR: 0, feeText: "locurile de la stat sunt fără taxă",
+    cut: { b: 7.4, t: 6.0 }, focus: ["bio", "chimie"], salary: { start: 4200, five: 5500 }, work: ["ture"], url: "https://www.edu.ro" },
+
+  { id: "ro-pl-alba", level: "postliceal", country: "RO", city: "Alba Iulia", uni: "Școala Postliceală Sanitară Alba Iulia", fac: "Școală postliceală de stat",
+    program: "Asistent medical generalist", domains: ["med"], lang: "ro", method: "dosar", years: 3, noBac: true,
+    methodText: "În 2026 au fost 56 de locuri finanțate de la buget, fără taxă de școlarizare, la învățământ de zi, cu durata de 3 ani. Înscrierile au avut loc între 1 iulie și 31 august 2026.",
+    places: { b: 56, t: null, note: "Admitere 2026, conform presei locale" }, verified: false, feeEUR: 0, feeText: "fără taxă de școlarizare",
+    cut: { b: 6.8, t: 5.5 }, focus: ["bio", "chimie"], salary: { start: 4200, five: 5500 }, work: ["ture"],
+    url: "https://alba24.ro/admitere-2026-la-scoala-postliceala-sanitara-alba-iulia-56-de-locuri-fara-taxa-pentru-asistent-medical-generalist-1147471.html" },
+
+  { id: "ro-pl-timisoara", level: "postliceal", country: "RO", city: "Timișoara", uni: "Colegiul Național „Ana Aslan” Timișoara", fac: "Școală postliceală de stat",
+    program: "Asistent medical generalist", domains: ["med"], lang: "ro", method: "examen", years: 3, noBac: true,
+    methodText: "Clase finanțate de la buget. În 2026 examenul de admitere a fost programat pe 26 august. Se pot înscrie absolvenții de liceu, cu sau fără diplomă de bacalaureat.",
+    places: null, verified: false, feeEUR: 0, feeText: "clase finanțate de la buget",
+    cut: { b: 7.0, t: 5.8 }, focus: ["bio", "chimie"], salary: { start: 4200, five: 5500 }, work: ["ture"], url: "https://cnanaaslan-tm.ro" },
+
+  { id: "ro-pl-tarnaveni", level: "postliceal", country: "RO", city: "Târnăveni", uni: "UMFST „George Emil Palade” Târgu Mureș – Colegiul din Târnăveni", fac: "Învățământ postliceal în cadrul universității",
+    program: "Asistent medical generalist", domains: ["med"], lang: "ro", method: "dosar", years: 3, noBac: true,
+    methodText: "Învățământ postliceal organizat de universitate. În 2026 au fost 64 de locuri bugetate, cu durata studiilor de 3 ani.",
+    places: { b: 64, t: null, note: "Admitere 2026" }, verified: false, feeEUR: 0, feeText: "locuri bugetate",
+    cut: { b: 6.8, t: 5.5 }, focus: ["bio", "chimie"], salary: { start: 4200, five: 5500 }, work: ["ture"], url: "https://www.umfst.ro" },
+
+  { id: "ro-pl-pitesti", level: "postliceal", country: "RO", city: "Pitești", uni: "POLITEHNICA București – Colegiul Terțiar Nonuniversitar (Pitești)", fac: "Învățământ postliceal în cadrul universității",
+    program: "Analist programator", domains: ["it"], lang: "ro", method: "dosar", years: 1.5, noBac: true,
+    methodText: "Calificare de nivel postliceal, cu durata de 1,5 ani. În 2025 au fost 28 de locuri la buget, fără taxă; verifică oferta curentă pe upit.ro.",
+    places: { b: 28, t: null, note: "Ofertă 2025" }, verified: false, feeEUR: 0, feeText: "locuri la buget, fără taxă",
+    cut: { b: 6.5, t: 5.5 }, focus: ["info", "mate"], salary: { start: 4000, five: 7000 }, url: "https://www.upit.ro" },
+
+  { id: "ro-dual-uab", level: "dual", country: "RO", city: "Alba Iulia", uni: "Universitatea „1 Decembrie 1918” din Alba Iulia, în parteneriat cu Kaufland", fac: "Licență în regim dual",
+    program: "Management în retail (dual)", domains: ["econ"], lang: "ro", method: "mixt", years: 3,
+    methodText: "Licență duală: facultate, practică plătită la companie și job la final. Compania a anunțat 41 de locuri în trei programe duale, dintre care 30 la Management în retail. Selecția implică atât universitatea, cât și compania. În România există deja zeci de programe universitare duale.",
+    places: { b: 30, t: null, note: "Locuri oferite de companie, 2026" }, verified: false, feeEUR: 0, feeText: "studii susținute de companie; practică plătită",
+    cut: { b: 7.2, t: 6.0 }, focus: ["economie", "mate"], stipendEUR: 250, url: "https://www.uab.ro" },
+
+  { id: "de-dhbw", level: "dual", country: "DE", city: "Stuttgart / Karlsruhe / Mannheim", uni: "Duale Hochschule Baden-Württemberg (DHBW)", fac: "Universitate publică duală",
+    program: "Duales Studium: Wirtschaftsinformatik / BWL / Maschinenbau", domains: ["it", "econ", "eng"], lang: "de", langMin: "b2", method: "mixt", years: 3,
+    methodText: "Te angajezi la o companie parteneră, care te plătește pe toată durata studiilor (de obicei ~800–1.700 € brut pe lună, în creștere în fiecare an), iar la 3 luni alternezi cursurile cu munca. Nu aplici la universitate, ci la companie, cu 12–18 luni înainte. Pentru candidații din străinătate există programul StartDual.international (DHBW Karlsruhe), care cere germană cel puțin B2 (de exemplu DSD II).",
+    feeEUR: 0, feeText: "0 € taxă; primești salariu lunar de la companie", deadline: "Aplici la companii cu 12–18 luni înainte de 1 octombrie",
+    cut: { a: 8.2 }, focus: ["mate", "info", "economie"], stipendEUR: 950, url: "https://www.dhbw.de" },
+
+  { id: "nl-hanze-ib", level: "aplicat", country: "NL", city: "Groningen", uni: "Hanze University of Applied Sciences", fac: "Universitate publică de științe aplicate (HBO)",
+    program: "BBA International Business", domains: ["econ"], lang: "en", method: "dosar", years: 4,
+    methodText: "Program practic de 4 ani, în engleză, cu stagiu în companie și semestru în străinătate. La HBO admiterea e mai accesibilă decât la universitățile de cercetare: diploma de bac și engleză (de regulă IELTS 6.0).",
+    feeEUR: 2694, feeText: "2.694 €/an (taxa legală UE, 2026–2027)", deadline: "1 mai (verifică)",
+    cut: { a: 7.0 }, focus: ["economie", "engleza"], url: "https://www.hanze.nl/en" },
+
+  { id: "nl-fontys-ict", level: "aplicat", country: "NL", city: "Eindhoven", uni: "Fontys University of Applied Sciences", fac: "Universitate publică de științe aplicate (HBO)",
+    program: "BSc ICT (Software / AI / Cyber Security)", domains: ["it"], lang: "en", method: "dosar", years: 4,
+    methodText: "Program practic de 4 ani, în engleză, cu proiecte pentru companii din regiunea Eindhoven și stagii. Admitere pe dosar: diplomă de bac și engleză (de regulă IELTS 6.0).",
+    feeEUR: 2694, feeText: "2.694 €/an", deadline: "1 mai (verifică)",
+    cut: { a: 7.0 }, focus: ["info", "mate"], url: "https://www.fontys.nl/en" },
+
+  { id: "nl-thuas-es", level: "aplicat", country: "NL", city: "Haga", uni: "The Hague University of Applied Sciences", fac: "Universitate publică de științe aplicate (HBO)",
+    program: "BA European Studies", domains: ["pol", "lang"], lang: "en", method: "dosar", years: 4,
+    methodText: "Program practic în engleză, în orașul instituțiilor internaționale: politici europene, limbi străine, stagiu și schimb de experiență. Admitere pe dosar: diplomă de bac și engleză.",
+    feeEUR: 2694, feeText: "2.694 €/an", deadline: "1 mai (verifică)",
+    cut: { a: 7.0 }, focus: ["istorie", "engleza", "limbi"], url: "https://www.thuas.com" },
+
+  { id: "nl-saxion-physio", level: "aplicat", country: "NL", city: "Enschede", uni: "Saxion University of Applied Sciences", fac: "Universitate publică de științe aplicate (HBO)",
+    program: "BSc Physiotherapy (EN)", domains: ["sport", "med"], lang: "en", method: "mixt", years: 4,
+    methodText: "Kinetoterapie în engleză, cu multă practică clinică. Locurile sunt limitate, deci poate exista o procedură de selecție; verifică termenul pe site.",
+    feeEUR: 2694, feeText: "2.694 €/an", deadline: "15 ianuarie dacă are selecție (verifică)",
+    cut: { a: 7.6 }, focus: ["sport", "bio"], url: "https://www.saxion.edu" }
+);
+
+/* ───────── Birocrație pe scurt: pașii esențiali pe fiecare țară (Ariadna îi detaliază pas cu pas) ───────── */
+COUNTRY_RESEARCH.RO.paperwork = [
+  "Te înscrii online pe platforma universității și plătești taxa de înscriere (~125–200 lei).",
+  "Dosar: diploma de bacalaureat (sau adeverința, în anul absolvirii), foaia matricolă, certificatul de naștere, cartea de identitate, adeverința medicală, fotografii.",
+  "După rezultate îți confirmi locul în termenul afișat; pentru locul la buget se depune diploma de bac în original.",
+  "Semnezi contractul de studii și, dacă e cazul, depui cererea de cazare în cămin."
+];
+COUNTRY_RESEARCH.NL.paperwork = [
+  "Îți faci cont în Studielink și alegi programul, apoi încarci documentele în portalul universității.",
+  "Diploma de bac și foaia matricolă, traduse în engleză de un traducător autorizat, plus certificatul de limbă.",
+  "După admitere plătești taxa (se poate și în rate) și cauți cazare din timp: e pasul cel mai greu în Olanda.",
+  "La sosire te înregistrezi la primărie ca să primești numărul BSN, apoi îți deschizi cont bancar.",
+  "Asigurarea de sănătate olandeză devine obligatorie dacă lucrezi; altfel folosești cardul european (EHIC)."
+];
+COUNTRY_RESEARCH.DE.paperwork = [
+  "Trimiți dosarul prin uni-assist, hochschulstart sau direct la universitate, după program.",
+  "Copii legalizate și traduceri autorizate ale diplomei de bac și ale foii matricole, plus certificatul de limbă (C1).",
+  "Pentru înmatriculare ai nevoie de dovada asigurării de sănătate (cardul european, confirmat de o casă de asigurări germană).",
+  "La sosire îți înregistrezi adresa la primărie (Anmeldung), de regulă în 14 zile, și îți deschizi cont bancar.",
+  "Plătești contribuția semestrială și primești legitimația, care include de obicei transportul public."
+];
+COUNTRY_RESEARCH.ES.paperwork = [
+  "Ceri acreditarea UNEDasiss: diploma de bac și foaia matricolă, cu traducere oficială în spaniolă (traducción jurada).",
+  "Te înscrii la probele PCE, dacă vrei o notă de admitere mai mare.",
+  "Faci preînscrierea (preinscripción) în comunitatea autonomă sau la universitatea dorită.",
+  "După admitere te înmatriculezi și plătești creditele (se poate în rate).",
+  "La sosire: înregistrarea ca cetățean UE (primești NIE) și empadronamiento la primărie."
+];
+COUNTRY_RESEARCH.NO.paperwork = [
+  "Aplici prin Samordna opptak și încarci diploma de bac și foaia matricolă, cu traducere autorizată.",
+  "Încarci dovada nivelului de norvegiană și de engleză.",
+  "După admitere confirmi locul și plătești taxa semestrială.",
+  "Dacă stai peste 3 luni, te înregistrezi la poliție ca cetățean UE și primești un număr de identificare.",
+  "Îți deschizi cont bancar și aplici la cămin prin organizația studențească locală."
+];
+COUNTRY_RESEARCH.SE.paperwork = [
+  "Îți faci cont pe universityadmissions.se și alegi până la 4 programe.",
+  "Încarci diploma de bac și foaia matricolă (cu traducere) și certificatul de limbă, până la termenul pentru documente.",
+  "Răspunzi la ofertă în termen; altfel pierzi locul.",
+  "Dacă studiile durează peste un an, ceri personnummer la Skatteverket.",
+  "Până atunci folosești cardul european de sănătate (EHIC)."
+];
+COUNTRY_RESEARCH.US.paperwork = [
+  "Aplici prin Common App (sau portalul universității): foaie matricolă tradusă, eseuri, recomandări, scoruri SAT și TOEFL.",
+  "Pentru ajutor financiar completezi formularele cerute de universitate (de exemplu CSS Profile).",
+  "După admitere primești formularul I-20 și plătești taxa SEVIS (I-901).",
+  "Completezi formularul DS-160 și mergi la interviul pentru viza de student F-1 la Ambasada SUA.",
+  "Pregătești dovada mijloacelor financiare și vaccinările cerute de universitate."
+];
+
+SOURCES.push(
+  ["undelucram.ro – Salarii IT de 8.000 lei net în prima jumătate a lui 2026", "https://www.undelucram.ro/ro/cumlucram/salarii-it-de-8000-lei-in-h1-2026-dar-puterea-de-cumparare-scade-2413"],
+  ["Capital.ro – Salariul mediu net în 2026 și domeniile cel mai bine plătite", "https://www.capital.ro/salariul-mediu-net-a-crescut-usor-in-2026-dar-ramane-cu-30-sub-asteptarile-candidatilor-in-ce-domenii-se-castiga-cel-mai-bine.html"],
+  ["Edupedu – Salariul profesorului debutant", "https://www.edupedu.ro/salariul-profesorului-debutant-ar-fi-trebuit-sa-ajunga-la-peste-5-000-de-lei-net-in-2026-cu-aproape-1-300-de-lei-mai-mult-decat-in-prezent/"],
+  ["Playtech – Tabel salarii medici, asistenți și rezidenți (2026)", "https://playtech.ro/2026/tabel-salarii-medici-asistenti-si-rezidenti-cum-se-calculeaza-noile-venituri-brute-sporurile-care-se-iau-in-calcul/"],
+  ["IamExpat – Salariul de început al absolvenților din Germania (~45.000 € brut/an)", "https://www.iamexpat.de/expat-info/german-expat-news/graduates-germany-earn-average-starting-salary-45000-euros"],
+  ["Alba24 – Admitere 2026 la Școala Postliceală Sanitară Alba Iulia", "https://alba24.ro/admitere-2026-la-scoala-postliceala-sanitara-alba-iulia-56-de-locuri-fara-taxa-pentru-asistent-medical-generalist-1147471.html"],
+  ["Edupedu – Noua programă pentru asistent medical generalist (4.600 de ore în 3 ani)", "https://www.edupedu.ro/noua-programa-scolara-pentru-calificarea-de-asistent-medical-generalist-aplicabila-din-2026-2027-pregatirea-se-aliniaza-la-noile-cerinte-europene-4-600-de-ore-de-formare-in-3-ani-mai-multa-practic/"],
+  ["Alba24 – Studiul dual universitar la Kaufland și Universitatea din Alba Iulia", "https://alba24.ro/facultate-practica-platita-si-job-la-final-cum-functioneaza-studiul-dual-universitar-la-kaufland-p-1135333.html"],
+  ["DHBW – Duale Hochschule Baden-Württemberg", "https://www.dhbw.de"]
+);
+
+</script>
+  <script>
+/* UniFinder Global — extindere (noiembrie 2026): țări noi, universități noi, burse și calendar de termene.
+   Se încarcă după data.js. Unde nu am găsit cifre oficiale, textele spun „estimare” sau „verifică”. */
+
+/* ───────── Steaguri pentru țările noi ───────── */
+Object.assign(FLAG_SVG, {
+  GB: '<rect width="9" height="6" fill="#012169"/><path d="M0 0L9 6M9 0L0 6" stroke="#fff" stroke-width="1.2"/><path d="M0 0L9 6M9 0L0 6" stroke="#C8102E" stroke-width=".45"/><path d="M4.5 0V6M0 3H9" stroke="#fff" stroke-width="1.8"/><path d="M4.5 0V6M0 3H9" stroke="#C8102E" stroke-width="1"/>',
+  IT: '<rect width="9" height="6" fill="#CE2B37"/><rect width="6" height="6" fill="#fff"/><rect width="3" height="6" fill="#009246"/>',
+  FR: '<rect width="9" height="6" fill="#CE1126"/><rect width="6" height="6" fill="#fff"/><rect width="3" height="6" fill="#002654"/>',
+  DK: '<rect width="9" height="6" fill="#C8102E"/><rect x="2.7" width=".9" height="6" fill="#fff"/><rect y="2.55" width="9" height=".9" fill="#fff"/>',
+  AT: '<rect width="9" height="6" fill="#ED2939"/><rect y="2" width="9" height="2" fill="#fff"/>',
+  IE: '<rect width="9" height="6" fill="#FF883E"/><rect width="6" height="6" fill="#fff"/><rect width="3" height="6" fill="#169B62"/>',
+  CH: '<rect width="9" height="6" fill="#DA291C"/><rect x="3.9" y="1.2" width="1.2" height="3.6" fill="#fff"/><rect x="2.7" y="2.4" width="3.6" height="1.2" fill="#fff"/>',
+  CA: '<rect width="9" height="6" fill="#fff"/><rect width="2.25" height="6" fill="#D52B1E"/><rect x="6.75" width="2.25" height="6" fill="#D52B1E"/><path d="M4.5 1.4l.55 1.1.9-.3-.35 1.2.6.25-1.2.9.1.55h-1.2l.1-.55-1.2-.9.6-.25-.35-1.2.9.3z" fill="#D52B1E"/>'
+});
+
+/* scurt rezumat pentru cardurile de țară de pe prima pagină */
+Object.assign(COUNTRIES.RO, { short: ["Locuri la buget gratuite", "Dosar sau examen (grilă)"] });
+Object.assign(COUNTRIES.NL, { short: ["2.694 €/an (taxa UE 2026–27)", "Dosar + engleză; numerus fixus cu selecție"] });
+Object.assign(COUNTRIES.DE, { short: ["0 € taxă, doar contribuție semestrială", "Dosar; majoritatea programelor în germană (C1)"] });
+Object.assign(COUNTRIES.ES, { short: ["~700–2.500 €/an", "UNEDasiss + PCE, notă de admitere până la 14"] });
+Object.assign(COUNTRIES.NO, { short: ["0 € pentru cetățenii UE", "Samordna opptak; norvegiană B2"] });
+Object.assign(COUNTRIES.SE, { short: ["0 € pentru cetățenii UE", "universityadmissions.se; termen 15 ianuarie"] });
+Object.assign(COUNTRIES.US, { short: ["~30.000–65.000 $/an; MIT oferă ajutor complet", "Holistică: note, SAT, eseuri, recomandări"] });
+
+/* ───────── Țări noi ───────── */
+Object.assign(COUNTRIES, {
+  GB: { name: "Marea Britanie", lang: "en", living: "1.300–2.200 €/lună (Londra la limita de sus)", livingEUR: 1600, months: 12, salaryFactor: 2.9,
+    portal: { label: "UCAS (înscriere centralizată)", url: "https://www.ucas.com" },
+    short: ["~25.000–50.000 £/an (taxă de student internațional)", "UCAS: 15 oct. (Oxford, Cambridge, Medicină) / 13 ian."] },
+  IT: { name: "Italia", lang: "it", living: "800–1.200 €/lună (Milano mai scump)", livingEUR: 1000, months: 12, salaryFactor: 1.9,
+    portal: { label: "Universitaly (preînscriere) + portalul universității", url: "https://www.universitaly.it" },
+    short: ["~150–4.000 €/an, în funcție de venitul familiei", "Programe în engleză; teste de admitere (TOLC, TOL, IMAT)"] },
+  FR: { name: "Franța", lang: "fr", living: "900–1.300 €/lună (Paris mai scump)", livingEUR: 1100, months: 12, salaryFactor: 2.4,
+    portal: { label: "Parcoursup", url: "https://www.parcoursup.gouv.fr" },
+    short: ["178 €/an la licență + CVEC 105 € (2026–27)", "Parcoursup, ianuarie–martie; franceză B2"] },
+  DK: { name: "Danemarca", lang: "en", living: "1.100–1.400 €/lună", livingEUR: 1250, months: 12, salaryFactor: 3.3,
+    portal: { label: "optagelse.dk", url: "https://www.optagelse.dk" },
+    short: ["0 € pentru cetățenii UE", "optagelse.dk, termen 15 martie; multe programe în engleză"] },
+  AT: { name: "Austria", lang: "de", living: "950–1.250 €/lună", livingEUR: 1100, months: 12, salaryFactor: 2.7,
+    portal: { label: "Portalul universității (de ex. u:space la Uni Wien)", url: "https://studieren.univie.ac.at/en/" },
+    short: ["~25 €/semestru (contribuția ÖH) pentru cetățenii UE", "Germană C1; teste de admitere la unele programe"] },
+  IE: { name: "Irlanda", lang: "en", living: "1.200–1.700 €/lună (Dublin foarte scump)", livingEUR: 1400, months: 12, salaryFactor: 3.0,
+    portal: { label: "CAO (înscriere centralizată)", url: "https://www.cao.ie" },
+    short: ["2.500 €/an contribuție studențească (2026–27)", "CAO, termen 1 februarie; bacul se transformă în puncte"] },
+  CH: { name: "Elveția", lang: "de", living: "1.800–2.400 €/lună", livingEUR: 2100, months: 12, salaryFactor: 5.0,
+    portal: { label: "Portalul ETH / EPFL", url: "https://ethz.ch/en/studies/registration-application.html" },
+    short: ["~4.400–4.700 €/an pentru studenți străini (ETH, EPFL)", "Germană sau franceză; primul an e foarte selectiv"] },
+  CA: { name: "Canada", lang: "en", living: "1.200–1.800 €/lună", livingEUR: 1500, months: 12, salaryFactor: 3.2,
+    portal: { label: "OUAC (Ontario) / portalul universității", url: "https://www.ouac.on.ca" },
+    short: ["~30.000–70.000 CAD/an pentru internaționali", "Dosar pe note; termen de regulă 15 ianuarie"] }
+});
+
+Object.assign(COUNTRY_RESEARCH, {
+  GB: {
+    system: "Aplici prin <b>UCAS</b>, la cel mult 5 programe, cu un singur eseu personal (personal statement) și o recomandare de la un profesor. Universitățile dau oferte <i>condiționate</i> de notele finale: de exemplu, o medie minimă la bac și note minime la anumite materii. Oxford, Cambridge, Medicina și multe programe de top au și teste de admitere (TMUA, ESAT, UCAT etc.) și interviuri.",
+    recognition: "Bacalaureatul românesc este acceptat, dar pragurile sunt mari la universitățile de top (de regulă peste 9–9,5, cu note mari la materiile de profil). Fiecare universitate își publică cerințele pentru România pe pagina „international entry requirements”.",
+    language: "IELTS Academic 6.5–7.5, în funcție de program, sau Cambridge C1 Advanced / C2 Proficiency cu scor echivalent.",
+    fees: "După Brexit, studenții din UE plătesc <b>taxa de student internațional</b>: aproximativ 25.000–50.000 £/an la licență (programele de laborator și Medicina sunt cele mai scumpe). Nu au acces la împrumuturile de stat britanice pentru taxe.",
+    scholarships: [
+      "Bursele pentru studenții internaționali la licență sunt puține și foarte competitive; fiecare universitate le listează pe pagina „scholarships”.",
+      "Unele universități au reduceri pentru studenții din UE sau burse pentru familii cu venituri mici; verifică direct.",
+      "Pentru majoritatea familiilor din România, costul total (taxă plus trai) depășește 35.000–60.000 £/an, deci e o opțiune doar cu bursă sau buget mare."
+    ],
+    deadlines: "Pentru intrarea în 2027: <b>15 octombrie 2026</b> la Oxford, Cambridge și majoritatea programelor de Medicină, Stomatologie și Medicină veterinară; <b>13 ianuarie 2027</b> pentru celelalte programe. Testele de admitere au loc de regulă în octombrie.",
+    tip: "Dacă ții la Oxford sau Cambridge, pregătirea începe din clasa a XI-a: testul de admitere, lecturi suplimentare în domeniu și exersarea interviului.",
+    paperwork: [
+      "Îți faci cont pe UCAS, alegi cel mult 5 programe și scrii eseul personal.",
+      "Un profesor îți scrie recomandarea direct în UCAS; încarci notele din liceu traduse în engleză.",
+      "Te înscrii la testele de admitere cerute (TMUA, ESAT, UCAT) și la interviuri, dacă e cazul.",
+      "După oferta finală primești CAS-ul de la universitate și ceri viza de student (Student visa), cu taxa de sănătate (IHS).",
+      "Rezervi locul în cămin; multe universități garantează cazare în primul an."
+    ]
+  },
+  IT: {
+    system: "Fiecare universitate își face propria selecție. Pentru programele în engleză aplici direct pe portalul universității și faci preînscrierea pe <b>Universitaly</b>. Multe programe au test de admitere: <b>TOLC</b> (CISIA), <b>TOL</b> la Politecnico di Milano sau testul pentru Medicină în engleză.",
+    recognition: "Bacalaureatul românesc dă acces la licență. Unele universități cer <i>Dichiarazione di valore</i> sau o declarație de comparabilitate CIMEA pentru diplomă.",
+    language: "Programele în engleză cer de regulă B2 (IELTS 5.5–6.5 sau echivalent). Pentru cele în italiană se cere B2 în italiană.",
+    fees: "Taxa depinde de <b>venitul familiei</b> (ISEE): de la ~150 € la ~3.000–4.000 €/an la universitățile publice. Studenții cu venituri din străinătate cer un ISEE echivalent (ISEEU parificato) la un centru CAF.",
+    scholarships: [
+      "<b>Bursele regionale DSU</b> (de exemplu ER.GO în Emilia-Romagna, DiSCo în Lazio, ESU în Veneto): pentru cetățenii UE, în funcție de venit. Pot acoperi taxa, cazarea și o sumă anuală de bani.",
+      "Reduceri de taxă pentru rezultate foarte bune, oferite de unele universități (de exemplu Politecnico di Milano)."
+    ],
+    deadlines: "Diferă de la o universitate la alta: pentru programele în engleză aplicațiile se deschid de regulă din toamnă și se închid între februarie și iulie, adesea în mai multe runde. Testele TOLC se pot da de mai multe ori pe an.",
+    tip: "Aplică la bursa DSU în aceeași vară în care te înscrii: termenul e de regulă în iulie–septembrie, iar cazarea în cămin se dă în funcție de ea.",
+    paperwork: [
+      "Aplici pe portalul universității și faci preînscrierea pe Universitaly.",
+      "Te înscrii la testul cerut (TOLC, TOL sau testul de Medicină) și îl susții.",
+      "Diploma de bac cu traducere și, după caz, declarația de comparabilitate CIMEA.",
+      "Ceri codul fiscal italian (codice fiscale) și ISEE echivalent pentru taxa redusă.",
+      "La sosire te înregistrezi la primărie (residenza) și îți deschizi cont bancar."
+    ]
+  },
+  FR: {
+    system: "Pentru licență aplici pe <b>Parcoursup</b>, cu până la 10 opțiuni, scrisori de motivație și note din liceu. Universitățile publice nu au examen de admitere, dar programele căutate selectează după dosar. Pentru Medicină se intră prin anul comun PASS sau L.AS, cu selecție la final.",
+    recognition: "Bacalaureatul românesc este acceptat ca diplomă de acces. Candidații din UE aplică pe Parcoursup, la fel ca elevii francezi.",
+    language: "Majoritatea licențelor se predau în franceză: universitățile cer de regulă <b>B2</b> (DELF B2 sau TCF). Programele de licență în engleză sunt rare la universitățile publice.",
+    fees: "Pentru cetățenii UE: <b>178 €/an</b> la licență și 255 €/an la master (2026–2027), plus contribuția CVEC de 105 €.",
+    scholarships: [
+      "<b>Bourses sur critères sociaux</b> (CROUS): accesibile cetățenilor UE în anumite condiții (de exemplu, dacă un părinte lucrează în Franța sau după o perioadă de ședere).",
+      "Ajutorul pentru chirie <b>APL</b> (CAF) se acordă și studenților străini care stau legal în Franța.",
+      "Camerele în cămin CROUS sunt ieftine, dar puține: aplică din primăvară."
+    ],
+    deadlines: "Parcoursup: înscrierea și alegerea opțiunilor aproximativ de la jumătatea lui ianuarie până la jumătatea lui martie, confirmarea dosarului până la începutul lui aprilie, răspunsurile din iunie. Verifică calendarul exact pe parcoursup.gouv.fr.",
+    tip: "Dacă vrei Franța, susține DELF B2 în clasa a XI-a sau la începutul clasei a XII-a; fără el, multe opțiuni Parcoursup sunt închise.",
+    paperwork: [
+      "Îți faci cont pe Parcoursup și alegi până la 10 opțiuni, cu o scrisoare de motivație pentru fiecare.",
+      "Încarci notele din clasele a XI-a și a XII-a și certificatul de franceză.",
+      "Accepți una dintre propuneri în termenul afișat.",
+      "Te înscrii administrativ la universitate și plătești CVEC.",
+      "Aplici pentru cămin la CROUS și pentru ajutorul de chirie la CAF."
+    ]
+  },
+  DK: {
+    system: "Aplici prin <b>optagelse.dk</b>, la până la 8 programe. Candidații cu diplomă străină intră de regulă pe <i>kvote 2</i>: notele, motivația și, la unele programe, un interviu sau un test. Programele cu multe cereri au selecție mai strictă.",
+    recognition: "Bacalaureatul românesc este acceptat; universitățile verifică materiile cerute (de exemplu matematică la nivel A pentru inginerie) și echivalează nivelurile cu cele daneze.",
+    language: "Programele în engleză cer de regulă engleză la nivelul „B” danez: IELTS 6.5 sau Cambridge C1.",
+    fees: "Universitățile publice <b>nu au taxe de școlarizare</b> pentru cetățenii UE/SEE.",
+    scholarships: [
+      "<b>SU</b> (sprijinul de stat danez, ~6.000 DKK/lună înainte de impozit) pentru cetățenii UE care au statut de lucrător: de regulă un job de cel puțin 10–12 ore pe săptămână.",
+      "Fără taxe de școlarizare, costul principal e traiul; mulți studenți lucrează cu jumătate de normă."
+    ],
+    deadlines: "<b>15 martie 2027, ora 12:00</b> pentru candidații cu diplomă străină (kvote 2). Documentele care lipsesc, cum e diploma de bac, se trimit de regulă până în iulie.",
+    tip: "Pune-ți pe optagelse.dk mai multe programe, în ordinea preferinței: primești o singură ofertă, la prima opțiune pentru care ești admis.",
+    paperwork: [
+      "Aplici pe optagelse.dk până pe 15 martie, cu foaia matricolă și certificatul de engleză.",
+      "Trimiți diploma de bac după ce o primești, până la termenul cerut de universitate.",
+      "Accepți locul și te înscrii la universitate.",
+      "La sosire ceri certificatul de înregistrare UE și numărul CPR (se fac la International House / primărie).",
+      "Cu CPR îți deschizi cont bancar și primești cardul de sănătate."
+    ]
+  },
+  AT: {
+    system: "Aplici direct la universitate (de exemplu prin u:space la Universitatea din Viena). Programele foarte căutate, ca Psihologia, Medicina sau Informatica la unele universități, au <b>procedură de admitere</b> cu test, iar înscrierea la test se face de regulă primăvara.",
+    recognition: "Bacalaureatul românesc dă acces direct la licență, cu condiția să ai acces la același tip de studii în România.",
+    language: "Majoritatea licențelor se predau în germană, nivel <b>C1</b>. Programele de licență în engleză sunt puține (de exemplu Business and Economics la WU Viena).",
+    fees: "Cetățenii UE nu plătesc taxă de școlarizare dacă termină în durata normală plus 2 semestre; plătesc doar contribuția ÖH, de aproximativ 25 €/semestru.",
+    scholarships: [
+      "<b>Studienbeihilfe</b> (sprijin de stat): pentru cetățenii UE, în anumite condiții (de exemplu, statut de lucrător sau ședere de mai mulți ani).",
+      "Burse de merit ale universităților (Leistungsstipendium) după primul an."
+    ],
+    deadlines: "Înscrierea la testele de admitere: de regulă în martie–aprilie. Termenul general de aplicare pentru semestrul de iarnă: <b>5 septembrie</b> (verifică pentru fiecare program). Medicina: înscriere la MedAT în martie, test la începutul lui iulie.",
+    tip: "La Medicina din Austria, 20% din locuri sunt rezervate candidaților din UE: testul MedAT contează mai mult decât media de bac.",
+    paperwork: [
+      "Aplici online pe portalul universității și, dacă e cazul, te înscrii la testul de admitere.",
+      "Încarci diploma de bac și foaia matricolă, cu traducere legalizată în germană, și certificatul de germană.",
+      "Plătești contribuția ÖH și te înmatriculezi.",
+      "La sosire îți înregistrezi adresa (Meldezettel) în 3 zile și ceri certificatul de înregistrare UE în 4 luni."
+    ]
+  },
+  IE: {
+    system: "Aplici prin <b>CAO</b>, cu până la 10 opțiuni în ordinea preferinței. Bacalaureatul se transformă în <b>puncte CAO</b> după un tabel de echivalare, iar locurile se dau în ordinea punctajului. Medicina cere și testul HPAT.",
+    recognition: "Bacalaureatul românesc este acceptat; fiecare universitate publică tabelul de conversie în puncte și materiile minime cerute (de exemplu matematică).",
+    language: "IELTS 6.5 sau echivalent (Cambridge C1), dacă nu ai făcut liceul în engleză.",
+    fees: "Cetățenii UE care au locuit în UE cel puțin 3 din ultimii 5 ani nu plătesc taxa de școlarizare (Free Fees Initiative), dar plătesc <b>contribuția studențească de 2.500 €/an</b> (2026–2027).",
+    scholarships: [
+      "<b>Free Fees Initiative</b>: statul plătește taxa de școlarizare pentru cetățenii UE eligibili.",
+      "<b>SUSI</b>: grantul de stat pentru contribuția studențească și trai, cu condiții de rezidență în Irlanda; verifică eligibilitatea.",
+      "Burse de merit ale universităților pentru rezultate foarte bune la admitere."
+    ],
+    deadlines: "<b>1 februarie 2027</b> pentru aplicarea CAO (cu taxă redusă dacă aplici mai devreme); lista de opțiuni se mai poate schimba până la 1 iulie. Ofertele vin în august.",
+    tip: "Cazarea în Dublin e foarte greu de găsit: caută din primăvară și ia în calcul și orașe precum Galway, Cork sau Limerick.",
+    paperwork: [
+      "Aplici pe cao.ie până pe 1 februarie și îți ordonezi opțiunile.",
+      "Trimiți diploma de bac și foaia matricolă, cu traducere, după ce le primești.",
+      "Accepți oferta în august și plătești contribuția studențească.",
+      "La sosire ceri PPS Number (număr personal) și îți deschizi cont bancar."
+    ]
+  },
+  CH: {
+    system: "Aplici direct la universitate. La ETH Zürich și EPFL, admiterea pentru diplomele străine depinde de țară și de note: poate fi directă sau cu examen de admitere. <b>Primul an e foarte selectiv</b>: o parte mare dintre studenți nu trec examenele de la finalul lui.",
+    recognition: "Bacalaureatul românesc poate da acces direct la ETH sau EPFL doar cu o medie generală mare și anumite materii; altfel se cere un examen de admitere. Verifică cerințele pentru România pe site-ul fiecărei universități.",
+    language: "ETH Zürich predă licența în germană, EPFL în franceză (cu tot mai multe cursuri în engleză în anii mai mari). Se cere nivel C1 în limba de predare.",
+    fees: "Studenții străini plătesc aproximativ <b>2.190 CHF/semestru</b> la ETH și EPFL (din toamna lui 2025), adică ~4.600 €/an. Sunt discuții despre reducerea taxei pentru studenții din UE; verifică suma actuală.",
+    scholarships: [
+      "Burse de merit ETH și EPFL sunt mai ales pentru master.",
+      "Burse cantonale: rare pentru studenții străini la licență.",
+      "Costul vieții e foarte mare: ~2.000 €/lună în Zürich sau Lausanne."
+    ],
+    deadlines: "Aplicarea pentru semestrul de toamnă: de regulă din noiembrie până la <b>30 aprilie</b> (verifică pe ethz.ch și epfl.ch). Examenele de admitere au loc în primăvară.",
+    tip: "Elveția are unele dintre cele mai bune universități tehnice din lume și taxe mici, dar traiul costă de 3 ori mai mult decât în România: fă calculul complet înainte.",
+    paperwork: [
+      "Aplici online la ETH sau EPFL și plătești taxa de aplicare.",
+      "Trimiți diploma de bac, foaia matricolă și certificatul de limbă; dacă e cazul, te înscrii la examenul de admitere.",
+      "După admitere ceri permisul de ședere pentru studenți (permis B) la biroul cantonal de migrație, în 14 zile de la sosire.",
+      "Încheie o asigurare de sănătate elvețiană sau cere scutire pe baza cardului european (EHIC)."
+    ]
+  },
+  CA: {
+    system: "Aplici direct la universitate sau prin <b>OUAC</b>, pentru universitățile din Ontario. Admiterea se face mai ales după <b>note</b> (cu accent pe materiile de profil), la unele programe și cu eseuri sau răspunsuri scurte. SAT-ul nu este cerut, de regulă.",
+    recognition: "Bacalaureatul românesc este acceptat; universitățile publică cerințele pentru diplomele din România, de obicei note mari la matematică pentru inginerie și informatică.",
+    language: "IELTS 6.5–7.0, TOEFL iBT 90–100 sau Duolingo English Test.",
+    fees: "Studenții internaționali plătesc aproximativ <b>30.000–70.000 CAD/an</b> doar pentru taxă (Toronto și UBC sunt la limita de sus), plus trai.",
+    scholarships: [
+      "<b>Lester B. Pearson</b> (University of Toronto): bursă completă pentru internaționali excepționali, cu nominalizare de la liceu.",
+      "<b>International Major Entrance Scholarship</b> (UBC): burse de merit pentru internaționali, uneori și în funcție de nevoie.",
+      "Burse automate de intrare pentru note mari la multe universități."
+    ],
+    deadlines: "De regulă <b>15 ianuarie 2027</b> (Toronto, UBC, McGill); bursele importante au termene mai devreme, în noiembrie–decembrie.",
+    tip: "Cu o bursă de intrare și un job part-time (studenții internaționali pot lucra legal în timpul semestrului), Canada poate deveni realistă.",
+    paperwork: [
+      "Aplici prin OUAC sau portalul universității și plătești taxa de aplicare.",
+      "Trimiți foaia matricolă tradusă și certificatul de engleză.",
+      "După admitere primești scrisoarea de acceptare și ceri <b>study permit</b> (permis de studii) cu dovada fondurilor.",
+      "Obții asigurarea de sănătate a provinciei sau a universității."
+    ]
+  }
+});
+
+/* ───────── Universități și programe noi ───────── */
+const _ro = (o) => Object.assign({ country: "RO", lang: "ro", verified: false, places: null }, o);
+PROGRAMS.push(
+  // ── România: medicină
+  _ro({ id: "umfcluj-med", city: "Cluj-Napoca", uni: "UMF „Iuliu Hațieganu” Cluj-Napoca", fac: "Facultatea de Medicină",
+    program: "Medicină (generală)", domains: ["med"], method: "examen", years: 6,
+    methodText: "Concurs scris tip grilă. În 2026 examenul a avut loc pe 26 iulie, cu 2.064 de candidați pentru 1.204 locuri la toate programele universității; trei candidați au obținut media 10 la Medicină.",
+    places: { b: 350, t: 80, note: "Ghidul oficial de admitere 2026; plus 5 locuri pentru românii de pretutindeni" }, verified: true,
+    feeEUR: Math.round(20000 / EUR_LEI), feeText: "≈ 18.000–22.000 lei/an (estimare; verifică pe umfcluj.ro)",
+    cut: { b: 9.3, t: 8.4 }, focus: ["bio", "chimie"], reqProfile: ["stnat", "mateinfo"], url: "https://umfcluj.ro" }),
+  _ro({ id: "umft-med", city: "Timișoara", uni: "UMF „Victor Babeș” Timișoara", fac: "Facultatea de Medicină",
+    program: "Medicină (generală)", domains: ["med"], method: "examen", years: 6,
+    methodText: "Concurs scris tip grilă, cu sesiune în iulie și, pentru locurile rămase, în septembrie. Oferta de școlarizare și taxele pentru 2026 sunt publicate pe umft.ro.",
+    feeEUR: Math.round(18000 / EUR_LEI), feeText: "≈ 15.000–20.000 lei/an (estimare; verifică pe umft.ro)",
+    cut: { b: 9.0, t: 8.0 }, focus: ["bio", "chimie"], reqProfile: ["stnat", "mateinfo"], url: "https://www.umft.ro" }),
+  _ro({ id: "umfst-med", city: "Târgu Mureș", uni: "UMFST „George Emil Palade” Târgu Mureș", fac: "Facultatea de Medicină",
+    program: "Medicină (generală)", domains: ["med"], method: "examen", years: 6,
+    methodText: "Concurs scris tip grilă; programul există și cu predare în engleză sau maghiară. Verifică oferta de locuri pe umfst.ro.",
+    feeEUR: Math.round(17000 / EUR_LEI), feeText: "≈ 15.000–19.000 lei/an (estimare)",
+    cut: { b: 8.8, t: 7.8 }, focus: ["bio", "chimie"], reqProfile: ["stnat", "mateinfo"], url: "https://www.umfst.ro" }),
+
+  // ── România: inginerie și IT
+  _ro({ id: "utcn-ac", city: "Cluj-Napoca", uni: "Universitatea Tehnică din Cluj-Napoca (UTCN)", fac: "Facultatea de Automatică și Calculatoare",
+    program: "Calculatoare și tehnologia informației", domains: ["it", "eng"], method: "examen", years: 4,
+    methodText: "Test scris la matematică (pe calculator). În sesiunea din iulie 2026, candidații care au dat testul au primit cazare gratuită în campusul Observator. UTCN a avut în 2026 aproximativ 5.100 de locuri la licență, dintre care ~3.600 la buget.",
+    places: { b: null, t: null, note: "Total UTCN licență 2026: ~3.600 buget din ~5.100 locuri" },
+    feeEUR: Math.round(5000 / EUR_LEI), feeText: "≈ 4.000–6.000 lei/an (estimare)",
+    cut: { b: 9.2, t: 7.8 }, focus: ["mate", "info"], reqProfile: ["mateinfo", "stnat", "tehnologic"], url: "https://admitereonline.utcluj.ro" }),
+  _ro({ id: "upt-cti", city: "Timișoara", uni: "Universitatea Politehnica Timișoara (UPT)", fac: "Facultatea de Automatică și Calculatoare",
+    program: "Calculatoare și tehnologia informației", domains: ["it", "eng"], method: "examen", years: 4,
+    methodText: "Concurs de admitere conform regulamentului UPT (probă de matematică sau rezultate școlare, în funcție de sesiune). Pentru 2026, UPT a anunțat mai multe locuri la buget decât în anul anterior.",
+    feeEUR: Math.round(5000 / EUR_LEI), feeText: "≈ 4.000–6.000 lei/an (estimare)",
+    cut: { b: 8.9, t: 7.3 }, focus: ["mate", "info"], reqProfile: ["mateinfo", "stnat", "tehnologic"], url: "https://www.upt.ro" }),
+  _ro({ id: "tuiasi-ac", city: "Iași", uni: "Universitatea Tehnică „Gheorghe Asachi” din Iași (TUIASI)", fac: "Facultatea de Automatică și Calculatoare",
+    program: "Calculatoare și tehnologia informației", domains: ["it", "eng"], method: "examen", years: 4,
+    methodText: "Concurs de admitere conform regulamentului TUIASI. Universitatea a anunțat pentru 2026 un număr record de locuri bugetate.",
+    feeEUR: Math.round(4500 / EUR_LEI), feeText: "≈ 3.500–5.500 lei/an (estimare)",
+    cut: { b: 8.7, t: 7.0 }, focus: ["mate", "info"], reqProfile: ["mateinfo", "stnat", "tehnologic"], url: "https://www.tuiasi.ro" }),
+  _ro({ id: "unitbv-auto", city: "Brașov", uni: "Universitatea Transilvania din Brașov", fac: "Facultatea de Inginerie Mecanică",
+    program: "Autovehicule rutiere", domains: ["eng"], method: "dosar", years: 4,
+    methodText: "Admitere pe baza mediei de bacalaureat și a rezultatelor școlare, conform regulamentului UNITBV. Brașov are o industrie auto puternică, cu multe stagii de practică.",
+    feeEUR: Math.round(4500 / EUR_LEI), feeText: "≈ 3.500–5.500 lei/an (estimare)",
+    cut: { b: 7.8, t: 6.0 }, focus: ["fizica", "mate"], url: "https://admitere.unitbv.ro" }),
+
+  // ── România: științe sociale, economie, drept
+  _ro({ id: "ubb-psi", city: "Cluj-Napoca", uni: "Universitatea Babeș-Bolyai (UBB)", fac: "Facultatea de Psihologie și Științe ale Educației",
+    program: "Psihologie (RO / EN / HU)", domains: ["psy"], method: "dosar", years: 3,
+    methodText: "Admiterea se face conform broșurii UBB 2026 (dosar, cu probă sau interviu la unele linii de studiu). Programul există și cu predare în engleză. Verifică ponderile pe infoadmitere.ubbcluj.ro.",
+    places: { b: null, t: null, note: "Total UBB 2026: 5.638 buget / 9.450 taxă la licență" },
+    feeEUR: Math.round(6000 / EUR_LEI), feeText: "≈ 5.000–7.000 lei/an (estimare)",
+    cut: { b: 9.3, t: 7.5 }, focus: ["psiho", "bio"], url: "https://infoadmitere.ubbcluj.ro" }),
+  _ro({ id: "ubb-fsega", city: "Cluj-Napoca", uni: "Universitatea Babeș-Bolyai (UBB)", fac: "Facultatea de Științe Economice și Gestiunea Afacerilor (FSEGA)",
+    program: "Economie și afaceri (RO / EN / DE)", domains: ["econ"], method: "dosar", years: 3,
+    methodText: "Admitere pe dosar, conform broșurii UBB 2026. Multe programe sunt disponibile și în engleză sau germană.",
+    feeEUR: Math.round(5500 / EUR_LEI), feeText: "≈ 4.500–6.500 lei/an (estimare)",
+    cut: { b: 9.0, t: 6.8 }, focus: ["economie", "mate"], url: "https://econ.ubbcluj.ro" }),
+  _ro({ id: "ubb-drept", city: "Cluj-Napoca", uni: "Universitatea Babeș-Bolyai (UBB)", fac: "Facultatea de Drept",
+    program: "Drept", domains: ["law"], method: "dosar", years: 4,
+    methodText: "Facultatea a renunțat la examenul scris și admite pe dosar (media de bacalaureat). Verifică formula exactă în broșura UBB.",
+    feeEUR: Math.round(6500 / EUR_LEI), feeText: "≈ 5.500–7.500 lei/an (estimare)",
+    cut: { b: 9.4, t: 7.6 }, focus: ["romana", "istorie"], url: "https://law.ubbcluj.ro" }),
+  _ro({ id: "ubb-se", city: "Cluj-Napoca", uni: "Universitatea Babeș-Bolyai (UBB)", fac: "Facultatea de Studii Europene",
+    program: "Relații internaționale și studii europene", domains: ["pol"], method: "dosar", years: 3,
+    methodText: "Admitere pe dosar, conform broșurii UBB 2026; există linii de studiu în engleză, franceză și germană.",
+    feeEUR: Math.round(5500 / EUR_LEI), feeText: "≈ 4.500–6.500 lei/an (estimare)",
+    cut: { b: 8.9, t: 6.6 }, focus: ["istorie", "limbi", "engleza"], url: "https://euro.ubbcluj.ro" }),
+  _ro({ id: "uaic-drept", city: "Iași", uni: "Universitatea „Alexandru Ioan Cuza” (UAIC)", fac: "Facultatea de Drept",
+    program: "Drept", domains: ["law"], method: "dosar", years: 4,
+    methodText: "Admitere conform metodologiei UAIC 2026. UAIC a avut 4.342 de locuri la buget la licență în 2026.",
+    feeEUR: Math.round(6000 / EUR_LEI), feeText: "≈ 5.000–7.000 lei/an (estimare)",
+    cut: { b: 9.2, t: 7.2 }, focus: ["romana", "istorie"], url: "https://admitere.uaic.ro" }),
+  _ro({ id: "uaic-feaa", city: "Iași", uni: "Universitatea „Alexandru Ioan Cuza” (UAIC)", fac: "Facultatea de Economie și Administrarea Afacerilor (FEAA)",
+    program: "Economie, finanțe, marketing", domains: ["econ"], method: "dosar", years: 3,
+    methodText: "Admitere pe dosar (media de bacalaureat), conform metodologiei UAIC 2026.",
+    feeEUR: Math.round(5000 / EUR_LEI), feeText: "≈ 4.000–6.000 lei/an (estimare)",
+    cut: { b: 8.7, t: 6.4 }, focus: ["economie", "mate"], url: "https://www.feaa.uaic.ro" }),
+  _ro({ id: "uaic-psi", city: "Iași", uni: "Universitatea „Alexandru Ioan Cuza” (UAIC)", fac: "Facultatea de Psihologie și Științe ale Educației",
+    program: "Psihologie", domains: ["psy"], method: "dosar", years: 3,
+    methodText: "Admitere conform metodologiei UAIC 2026; programul este printre cele mai căutate din Iași.",
+    feeEUR: Math.round(5000 / EUR_LEI), feeText: "≈ 4.000–6.000 lei/an (estimare)",
+    cut: { b: 9.2, t: 7.0 }, focus: ["psiho", "bio"], url: "https://admitere.uaic.ro" }),
+  _ro({ id: "uvt-psi", city: "Timișoara", uni: "Universitatea de Vest din Timișoara (UVT)", fac: "Facultatea de Sociologie și Psihologie",
+    program: "Psihologie", domains: ["psy"], method: "dosar", years: 3,
+    methodText: "Admitere pe dosar, conform metodologiei UVT. În 2024 UVT a avut peste 10.000 de locuri, dintre care peste 4.300 la buget.",
+    feeEUR: Math.round(5000 / EUR_LEI), feeText: "≈ 4.000–6.000 lei/an (estimare)",
+    cut: { b: 9.0, t: 6.8 }, focus: ["psiho", "bio"], url: "https://admitere.uvt.ro" }),
+  _ro({ id: "uvt-info", city: "Timișoara", uni: "Universitatea de Vest din Timișoara (UVT)", fac: "Facultatea de Matematică și Informatică",
+    program: "Informatică", domains: ["it"], method: "dosar", years: 3,
+    methodText: "Admitere conform metodologiei UVT (media de bac, cu pondere pe matematică sau informatică). Timișoara are multe companii IT, deci și stagii.",
+    feeEUR: Math.round(5000 / EUR_LEI), feeText: "≈ 4.000–6.000 lei/an (estimare)",
+    cut: { b: 8.8, t: 6.8 }, focus: ["mate", "info"], url: "https://info.uvt.ro" }),
+  _ro({ id: "uvt-feaa", city: "Timișoara", uni: "Universitatea de Vest din Timișoara (UVT)", fac: "Facultatea de Economie și de Administrare a Afacerilor",
+    program: "Economie și administrarea afacerilor", domains: ["econ"], method: "dosar", years: 3,
+    methodText: "Admitere pe dosar, conform metodologiei UVT.",
+    feeEUR: Math.round(4500 / EUR_LEI), feeText: "≈ 4.000–5.500 lei/an (estimare)",
+    cut: { b: 8.3, t: 6.0 }, focus: ["economie", "mate"], url: "https://feaa.uvt.ro" }),
+  _ro({ id: "snspa-pol", city: "București", uni: "Școala Națională de Studii Politice și Administrative (SNSPA)", fac: "Facultatea de Științe Politice / Comunicare și Relații Publice",
+    program: "Științe politice / Comunicare și relații publice", domains: ["pol", "comm"], method: "dosar", years: 3,
+    methodText: "Admitere conform regulamentului SNSPA 2026, cu locuri la buget și cu taxă la învățământul cu frecvență. SNSPA a raportat cea mai mare concurență din ultimii 15 ani.",
+    feeEUR: Math.round(6000 / EUR_LEI), feeText: "≈ 5.000–7.000 lei/an (estimare)",
+    cut: { b: 9.1, t: 7.0 }, focus: ["istorie", "romana", "engleza"], url: "https://admitere.snspa.ro" }),
+
+  // ── România: arte și sport
+  _ro({ id: "unarte-design", city: "București", uni: "Universitatea Națională de Arte București (UNArte)", fac: "Facultatea de Arte Decorative și Design",
+    program: "Design / Arte plastice", domains: ["arts", "arch"], method: "vocational", years: 3,
+    methodText: "Probe practice de specialitate (desen, compoziție, portofoliu), apoi media de bac cu pondere mică. Pregătirea artistică contează decisiv.",
+    feeEUR: Math.round(6000 / EUR_LEI), feeText: "≈ 5.000–7.000 lei/an (estimare)",
+    cut: { b: 8.6, t: 7.0 }, focus: ["arte"], url: "https://unarte.org" }),
+  _ro({ id: "unmb-muz", city: "București", uni: "Universitatea Națională de Muzică București (UNMB)", fac: "Facultatea de Interpretare Muzicală",
+    program: "Interpretare muzicală", domains: ["arts"], method: "vocational", years: 4,
+    methodText: "Probe de aptitudini și de interpretare la instrument sau voce, eliminatorii. Se recomandă pregătire de mai mulți ani, de regulă la un liceu de muzică.",
+    feeEUR: Math.round(6000 / EUR_LEI), feeText: "≈ 5.000–7.000 lei/an (estimare)",
+    cut: { b: 8.6, t: 7.0 }, focus: ["muzica"], url: "https://www.unmb.ro" }),
+  _ro({ id: "unefs-sport", city: "București", uni: "Universitatea Națională de Educație Fizică și Sport (UNEFS)", fac: "Facultatea de Educație Fizică și Sport / Kinetoterapie",
+    program: "Educație fizică și sport / Kinetoterapie", domains: ["sport", "med"], method: "vocational", years: 3,
+    methodText: "Probe practice (parcurs aplicativ, probe sportive) și media de bac. La Kinetoterapie concurența e mai mare.",
+    feeEUR: Math.round(5000 / EUR_LEI), feeText: "≈ 4.000–6.000 lei/an (estimare)",
+    cut: { b: 8.0, t: 6.0 }, focus: ["sport", "bio"], url: "https://unefs.ro" }),
+
+  // ── Marea Britanie
+  { id: "gb-ox-cs", country: "GB", city: "Oxford", uni: "University of Oxford", fac: "",
+    program: "BA Computer Science / Mathematics", domains: ["it", "sci"], lang: "en", method: "mixt", years: 3,
+    methodText: "UCAS până pe 15 octombrie, test de admitere (TMUA sau testul de matematică al universității) și interviu academic. Selecție extrem de competitivă; olimpiadele contează mult.",
+    feeEUR: 54000, feeText: "≈ 40.000–50.000 £/an (taxă de student internațional)", deadline: "15 octombrie 2026 (UCAS)",
+    cut: { a: 9.9 }, maxChance: 15, focus: ["mate", "info"], reqProfile: ["mateinfo", "stnat"], url: "https://www.ox.ac.uk/admissions/undergraduate" },
+  { id: "gb-cam-natsci", country: "GB", city: "Cambridge", uni: "University of Cambridge", fac: "",
+    program: "BA Natural Sciences / Engineering", domains: ["sci", "eng", "bio"], lang: "en", method: "mixt", years: 3,
+    methodText: "UCAS până pe 15 octombrie, formularul suplimentar al universității, test de admitere (de exemplu ESAT) și interviu. Notele la matematică și științe trebuie să fie aproape maxime.",
+    feeEUR: 47000, feeText: "≈ 37.000–42.000 £/an, plus taxa de colegiu", deadline: "15 octombrie 2026 (UCAS)",
+    cut: { a: 9.9 }, maxChance: 15, focus: ["fizica", "chimie", "mate", "bio"], reqProfile: ["mateinfo", "stnat"], url: "https://www.undergraduate.study.cam.ac.uk" },
+  { id: "gb-imp-comp", country: "GB", city: "Londra", uni: "Imperial College London", fac: "",
+    program: "BEng Computing", domains: ["it", "eng"], lang: "en", method: "mixt", years: 3,
+    methodText: "UCAS până pe 13 ianuarie 2027, test TMUA și, pentru unii candidați, interviu. Unul dintre cele mai căutate programe de informatică din Europa.",
+    feeEUR: 50000, feeText: "≈ 40.000–45.000 £/an", deadline: "13 ianuarie 2027 (UCAS)",
+    cut: { a: 9.7 }, maxChance: 30, focus: ["mate", "info"], reqProfile: ["mateinfo", "stnat"], url: "https://www.imperial.ac.uk/study/apply/undergraduate/" },
+  { id: "gb-ucl-econ", country: "GB", city: "Londra", uni: "University College London (UCL)", fac: "",
+    program: "BSc Economics / Psychology", domains: ["econ", "psy"], lang: "en", method: "dosar", years: 3,
+    methodText: "UCAS până pe 13 ianuarie 2027: note, eseu personal și recomandare. La Economie se cer note foarte mari la matematică.",
+    feeEUR: 40000, feeText: "≈ 32.000–38.000 £/an", deadline: "13 ianuarie 2027 (UCAS)",
+    cut: { a: 9.5 }, maxChance: 40, focus: ["economie", "mate", "psiho"], url: "https://www.ucl.ac.uk/prospective-students/undergraduate" },
+  { id: "gb-ed-inf", country: "GB", city: "Edinburgh", uni: "University of Edinburgh", fac: "",
+    program: "BSc Informatics / Psychology (4 ani, sistem scoțian)", domains: ["it", "psy"], lang: "en", method: "dosar", years: 4,
+    methodText: "UCAS până pe 13 ianuarie 2027. În Scoția licența durează 4 ani. Studenții din UE plătesc taxa de internațional.",
+    feeEUR: 36000, feeText: "≈ 28.000–36.000 £/an", deadline: "13 ianuarie 2027 (UCAS)",
+    cut: { a: 9.1 }, maxChance: 55, focus: ["info", "mate", "psiho"], url: "https://study.ed.ac.uk/undergraduate" },
+
+  // ── Italia
+  { id: "it-polimi-cse", country: "IT", city: "Milano", uni: "Politecnico di Milano", fac: "",
+    program: "BSc Computer Science and Engineering / Engineering (EN)", domains: ["it", "eng"], lang: "en", method: "examen", years: 3,
+    methodText: "Admitere prin testul TOL (online, în engleză), cu sesiuni din toamnă până în primăvară. Taxa se calculează după venitul familiei (ISEE).",
+    feeEUR: 2500, feeText: "≈ 160–3.950 €/an, în funcție de venitul familiei", deadline: "Mai multe runde, de regulă noiembrie–aprilie (verifică)",
+    cut: { a: 8.8 }, focus: ["mate", "fizica", "info"], reqProfile: ["mateinfo", "stnat", "tehnologic"], url: "https://www.polimi.it/en/prospective-students" },
+  { id: "it-unibo-be", country: "IT", city: "Bologna", uni: "Università di Bologna", fac: "",
+    program: "BSc Business and Economics (EN)", domains: ["econ"], lang: "en", method: "mixt", years: 3,
+    methodText: "Selecție pe baza testului (TOLC sau SAT, după runda de aplicare) și a dosarului. Cea mai veche universitate din Europa.",
+    feeEUR: 2000, feeText: "≈ 0–3.000 €/an, în funcție de venitul familiei", deadline: "Mai multe runde, de regulă ianuarie–mai (verifică)",
+    cut: { a: 8.5 }, focus: ["economie", "mate"], url: "https://www.unibo.it/en/study" },
+  { id: "it-unipd-psy", country: "IT", city: "Padova", uni: "Università di Padova", fac: "",
+    program: "BSc Psychological Science (EN)", domains: ["psy"], lang: "en", method: "mixt", years: 3,
+    methodText: "Selecție pe baza unui test și a dosarului academic; locuri limitate pentru candidații din UE și din afara UE.",
+    feeEUR: 2000, feeText: "≈ 0–2.700 €/an, în funcție de venitul familiei", deadline: "Primăvara (verifică)",
+    cut: { a: 8.6 }, focus: ["psiho", "bio"], url: "https://www.unipd.it/en/" },
+  { id: "it-sapienza-med", country: "IT", city: "Roma", uni: "Sapienza Università di Roma", fac: "",
+    program: "Medicine and Surgery (EN, 6 ani)", domains: ["med"], lang: "en", method: "examen", years: 6,
+    methodText: "Admitere prin test național pentru programele de Medicină în engleză; regulile s-au schimbat după reforma din 2025, deci verifică procedura actuală. Concurență foarte mare.",
+    feeEUR: 2500, feeText: "≈ 0–3.000 €/an, în funcție de venitul familiei", deadline: "De regulă primăvara (verifică)",
+    cut: { a: 9.5 }, focus: ["bio", "chimie"], reqProfile: ["stnat", "mateinfo"], url: "https://www.uniroma1.it/en" },
+
+  // ── Franța
+  { id: "fr-sciencespo", country: "FR", city: "Dijon / Paris", uni: "Sciences Po (campusul din Dijon: Europa Centrală și de Est)", fac: "",
+    program: "Bachelor (Collège universitaire), program în engleză și franceză", domains: ["pol", "econ", "hum"], lang: "en", method: "mixt", years: 3,
+    methodText: "Selecție pe dosar (note, eseuri) și interviu. Campusul din Dijon este dedicat Europei Centrale și de Est, deci foarte potrivit pentru candidații din România.",
+    feeEUR: 7000, feeText: "0–~14.000 €/an pentru cetățenii UE, în funcție de venitul familiei", deadline: "De regulă iarna (verifică pe sciencespo.fr)",
+    cut: { a: 9.2 }, maxChance: 45, focus: ["istorie", "engleza", "limbi", "economie"], url: "https://www.sciencespo.fr/college/en/" },
+  { id: "fr-sorbonne-sci", country: "FR", city: "Paris", uni: "Sorbonne Université", fac: "",
+    program: "Licence Sciences (matematică, fizică, biologie, informatică)", domains: ["sci", "bio", "it"], lang: "fr", method: "dosar", years: 3,
+    methodText: "Aplicare pe Parcoursup, cu dosar și scrisoare de motivație. Se predă în franceză (B2).",
+    feeEUR: 290, feeText: "178 €/an + CVEC 105 € (2026–2027)", deadline: "Parcoursup: ianuarie–martie 2027",
+    cut: { a: 8.2 }, focus: ["mate", "fizica", "bio", "info"], url: "https://www.sorbonne-universite.fr" },
+  { id: "fr-saclay", country: "FR", city: "Paris-Saclay", uni: "Université Paris-Saclay", fac: "",
+    program: "Licence Mathématiques / Physique / Informatique", domains: ["sci", "it", "eng"], lang: "fr", method: "dosar", years: 3,
+    methodText: "Aplicare pe Parcoursup. Universitate cu profil științific puternic, aproape de multe centre de cercetare. Se predă în franceză.",
+    feeEUR: 290, feeText: "178 €/an + CVEC 105 €", deadline: "Parcoursup: ianuarie–martie 2027",
+    cut: { a: 8.4 }, focus: ["mate", "fizica", "info"], reqProfile: ["mateinfo", "stnat"], url: "https://www.universite-paris-saclay.fr" },
+  { id: "fr-upcite-med", country: "FR", city: "Paris", uni: "Université Paris Cité", fac: "",
+    program: "Medicină prin anul comun PASS", domains: ["med"], lang: "fr", method: "mixt", years: 6,
+    methodText: "Intrare pe Parcoursup în anul comun PASS; la finalul lui, doar o parte dintre studenți trec mai departe la Medicină, după note și uneori interviu. Se predă în franceză.",
+    feeEUR: 290, feeText: "178 €/an + CVEC 105 €", deadline: "Parcoursup: ianuarie–martie 2027",
+    cut: { a: 9.2 }, focus: ["bio", "chimie"], reqProfile: ["stnat", "mateinfo"], url: "https://u-paris.fr" },
+  { id: "fr-uga-info", country: "FR", city: "Grenoble", uni: "Université Grenoble Alpes", fac: "",
+    program: "Licence Informatique", domains: ["it"], lang: "fr", method: "dosar", years: 3,
+    methodText: "Aplicare pe Parcoursup. Grenoble e un oraș studențesc cu costuri mai mici decât Parisul și o industrie tehnologică puternică.",
+    feeEUR: 290, feeText: "178 €/an + CVEC 105 €", deadline: "Parcoursup: ianuarie–martie 2027",
+    cut: { a: 7.8 }, focus: ["info", "mate"], url: "https://www.univ-grenoble-alpes.fr" },
+
+  // ── Danemarca
+  { id: "dk-dtu-eng", country: "DK", city: "Lyngby (Copenhaga)", uni: "Technical University of Denmark (DTU)", fac: "",
+    program: "BSc General Engineering (EN)", domains: ["eng", "sci"], lang: "en", method: "dosar", years: 3,
+    methodText: "Aplicare pe optagelse.dk până pe 15 martie (kvote 2): note, matematică și fizică la nivel avansat și engleză. Program interdisciplinar în engleză.",
+    feeEUR: 0, feeText: "0 € pentru cetățenii UE", deadline: "15 martie 2027",
+    cut: { a: 8.7 }, focus: ["mate", "fizica", "chimie"], reqProfile: ["mateinfo", "stnat"], url: "https://www.dtu.dk/english/education/undergraduate" },
+  { id: "dk-cbs-ib", country: "DK", city: "Copenhaga", uni: "Copenhagen Business School (CBS)", fac: "",
+    program: "BSc International Business (EN)", domains: ["econ"], lang: "en", method: "mixt", years: 3,
+    methodText: "Aplicare pe optagelse.dk până pe 15 martie; selecție pe note și, pentru kvote 2, pe un test sau o evaluare suplimentară. Unul dintre cele mai căutate programe de business din nordul Europei.",
+    feeEUR: 0, feeText: "0 € pentru cetățenii UE", deadline: "15 martie 2027",
+    cut: { a: 9.1 }, focus: ["economie", "mate", "engleza"], url: "https://www.cbs.dk/en/study/bachelor" },
+  { id: "dk-au-eba", country: "DK", city: "Aarhus", uni: "Aarhus University", fac: "",
+    program: "BSc Economics and Business Administration (EN)", domains: ["econ"], lang: "en", method: "dosar", years: 3,
+    methodText: "Aplicare pe optagelse.dk până pe 15 martie; se cere matematică la nivel bun și engleză.",
+    feeEUR: 0, feeText: "0 € pentru cetățenii UE", deadline: "15 martie 2027",
+    cut: { a: 8.4 }, focus: ["economie", "mate"], url: "https://international.au.dk/education/" },
+  { id: "dk-sdu-es", country: "DK", city: "Odense", uni: "University of Southern Denmark (SDU)", fac: "",
+    program: "BA European Studies (EN)", domains: ["pol", "lang"], lang: "en", method: "dosar", years: 3,
+    methodText: "Aplicare pe optagelse.dk până pe 15 martie; dosar și engleză. SDU recomandă și testul uniTEST pentru candidații cu bacalaureat românesc.",
+    feeEUR: 0, feeText: "0 € pentru cetățenii UE", deadline: "15 martie 2027",
+    cut: { a: 7.8 }, focus: ["istorie", "limbi", "engleza"], url: "https://www.sdu.dk/en/uddannelse/bachelor" },
+
+  // ── Austria
+  { id: "at-wu-be", country: "AT", city: "Viena", uni: "WU Wien (Vienna University of Economics and Business)", fac: "",
+    program: "BSc Business and Economics (EN)", domains: ["econ"], lang: "en", method: "examen", years: 3,
+    methodText: "Program în engleză cu procedură de admitere (test) din cauza numărului mare de candidați. Pentru cetățenii UE nu există taxă de școlarizare în durata normală de studiu.",
+    feeEUR: 50, feeText: "~25 €/semestru (contribuția ÖH)", deadline: "Înscrierea la procedura de admitere: de regulă primăvara (verifică)",
+    cut: { a: 8.5 }, focus: ["economie", "mate", "engleza"], url: "https://www.wu.ac.at/en/programs/bachelors-programs" },
+  { id: "at-univie-psy", country: "AT", city: "Viena", uni: "Universität Wien", fac: "",
+    program: "BSc Psychologie", domains: ["psy"], lang: "de", method: "examen", years: 3,
+    methodText: "Procedură de admitere cu test (înscriere primăvara, test vara). Se predă în germană (C1).",
+    feeEUR: 50, feeText: "~25 €/semestru (contribuția ÖH)", deadline: "Înscrierea la test: de regulă martie–aprilie",
+    cut: { a: 8.8 }, focus: ["psiho", "bio"], url: "https://studieren.univie.ac.at/en/" },
+  { id: "at-tuw-inf", country: "AT", city: "Viena", uni: "TU Wien", fac: "",
+    program: "BSc Informatik", domains: ["it"], lang: "de", method: "mixt", years: 3,
+    methodText: "Aplicare online; la unele programe de informatică există procedură de admitere. Se predă în germană (C1).",
+    feeEUR: 50, feeText: "~25 €/semestru (contribuția ÖH)", deadline: "Verifică pe tuwien.at (de regulă primăvara–vara)",
+    cut: { a: 8.2 }, focus: ["info", "mate"], reqProfile: ["mateinfo", "stnat", "tehnologic"], url: "https://www.tuwien.at/en/studies" },
+  { id: "at-meduni-med", country: "AT", city: "Viena", uni: "Medizinische Universität Wien", fac: "",
+    program: "Humanmedizin (Medicină, 6 ani)", domains: ["med"], lang: "de", method: "examen", years: 6,
+    methodText: "Admitere prin testul MedAT (înscriere în martie, test la începutul lui iulie). 20% din locuri sunt rezervate candidaților din UE. Se predă în germană.",
+    feeEUR: 50, feeText: "~25 €/semestru (contribuția ÖH)", deadline: "Înscrierea la MedAT: martie 2027",
+    cut: { a: 9.6 }, focus: ["bio", "chimie", "fizica"], reqProfile: ["stnat", "mateinfo"], url: "https://www.meduniwien.ac.at" },
+
+  // ── Irlanda
+  { id: "ie-tcd-cs", country: "IE", city: "Dublin", uni: "Trinity College Dublin", fac: "",
+    program: "Computer Science (BA, 4 ani)", domains: ["it"], lang: "en", method: "dosar", years: 4,
+    methodText: "Aplicare prin CAO până pe 1 februarie. Bacalaureatul se transformă în puncte CAO, iar locurile se dau după punctaj.",
+    feeEUR: 2500, feeText: "2.500 €/an contribuție studențească (taxa e plătită de stat pentru cetățenii UE eligibili)", deadline: "1 februarie 2027 (CAO)",
+    cut: { a: 9.2 }, focus: ["mate", "info"], url: "https://www.tcd.ie/study/undergraduate/" },
+  { id: "ie-ucd-bus", country: "IE", city: "Dublin", uni: "University College Dublin (UCD)", fac: "",
+    program: "Commerce / Economics (4 ani)", domains: ["econ"], lang: "en", method: "dosar", years: 4,
+    methodText: "Aplicare prin CAO până pe 1 februarie, după punctaj. Mulți studenți fac un an de stagiu sau în străinătate.",
+    feeEUR: 2500, feeText: "2.500 €/an contribuție studențească", deadline: "1 februarie 2027 (CAO)",
+    cut: { a: 8.8 }, focus: ["economie", "mate"], url: "https://www.ucd.ie/study/" },
+  { id: "ie-ucd-med", country: "IE", city: "Dublin", uni: "University College Dublin (UCD)", fac: "",
+    program: "Medicine (6 ani)", domains: ["med"], lang: "en", method: "examen", years: 6,
+    methodText: "Aplicare prin CAO până pe 1 februarie și testul HPAT (februarie). Punctajul combină notele cu rezultatul la HPAT; locurile pentru UE sunt puține.",
+    feeEUR: 2500, feeText: "2.500 €/an contribuție studențească (verifică dacă se aplică Free Fees la Medicină)", deadline: "1 februarie 2027 (CAO) + HPAT",
+    cut: { a: 9.6 }, focus: ["bio", "chimie"], reqProfile: ["stnat", "mateinfo"], url: "https://www.ucd.ie/medicine/" },
+
+  // ── Elveția
+  { id: "ch-eth-inf", country: "CH", city: "Zürich", uni: "ETH Zürich", fac: "",
+    program: "BSc Informatik", domains: ["it", "sci"], lang: "de", method: "examen", years: 3,
+    methodText: "Admitere directă sau cu examen de admitere, în funcție de diplomă și note. Se predă în germană; primul an are examene foarte selective.",
+    feeEUR: 4600, feeText: "≈ 2.190 CHF/semestru pentru studenți străini (~4.600 €/an)", deadline: "30 aprilie (verifică pe ethz.ch)",
+    cut: { a: 9.6 }, maxChance: 40, focus: ["mate", "info", "fizica"], reqProfile: ["mateinfo", "stnat"], url: "https://ethz.ch/en/studies/registration-application.html" },
+  { id: "ch-epfl-cs", country: "CH", city: "Lausanne", uni: "EPFL", fac: "",
+    program: "Bachelor Informatique / Ingénierie", domains: ["it", "eng"], lang: "fr", method: "mixt", years: 3,
+    methodText: "Admitere pe dosar (diplomă cu medie mare) sau examen, în funcție de țară; primul an (propédeutique) are o rată mare de eșec. Se predă în franceză.",
+    feeEUR: 4600, feeText: "≈ 2.190 CHF/semestru pentru studenți străini", deadline: "30 aprilie (verifică pe epfl.ch)",
+    cut: { a: 9.4 }, maxChance: 45, focus: ["mate", "info", "fizica"], reqProfile: ["mateinfo", "stnat"], url: "https://www.epfl.ch/education/admission/" },
+
+  // ── Canada
+  { id: "ca-uoft-cs", country: "CA", city: "Toronto", uni: "University of Toronto", fac: "",
+    program: "BSc Computer Science", domains: ["it"], lang: "en", method: "dosar", years: 4,
+    methodText: "Aplicare prin OUAC până pe 15 ianuarie: note (accent pe matematică), plus un profil personal scurt la unele programe. Locurile de la Computer Science sunt foarte limitate.",
+    feeEUR: 45000, feeText: "≈ 60.000–70.000 CAD/an pentru internaționali", deadline: "15 ianuarie 2027 (OUAC)",
+    cut: { a: 9.4 }, maxChance: 40, focus: ["mate", "info"], reqProfile: ["mateinfo", "stnat"], url: "https://future.utoronto.ca" },
+  { id: "ca-ubc-sci", country: "CA", city: "Vancouver", uni: "University of British Columbia (UBC)", fac: "",
+    program: "BSc Science / BA Arts", domains: ["sci", "bio", "psy", "pol"], lang: "en", method: "dosar", years: 4,
+    methodText: "Aplicare online până pe 15 ianuarie: note și un profil personal cu răspunsuri scurte. UBC are bursa International Major Entrance Scholarship.",
+    feeEUR: 33000, feeText: "≈ 45.000–60.000 CAD/an pentru internaționali", deadline: "15 ianuarie 2027",
+    cut: { a: 9.0 }, maxChance: 55, focus: ["bio", "chimie", "psiho", "istorie"], url: "https://you.ubc.ca" },
+  { id: "ca-mcgill-eng", country: "CA", city: "Montréal", uni: "McGill University", fac: "",
+    program: "BEng Engineering / BA Economics", domains: ["eng", "econ"], lang: "en", method: "dosar", years: 4,
+    methodText: "Aplicare online până pe 15 ianuarie, pe baza notelor. Montréal e un oraș bilingv, cu costuri de trai mai mici decât Toronto sau Vancouver.",
+    feeEUR: 30000, feeText: "≈ 35.000–60.000 CAD/an pentru internaționali", deadline: "15 ianuarie 2027",
+    cut: { a: 8.9 }, maxChance: 60, focus: ["mate", "fizica", "economie"], url: "https://www.mcgill.ca/undergraduate-admissions" },
+
+  // ── Mai multe programe în țările existente
+  { id: "nl-uu-psy", country: "NL", city: "Utrecht", uni: "Utrecht University", fac: "",
+    program: "BSc Liberal Arts and Sciences / Psychology", domains: ["psy", "hum"], lang: "en", method: "mixt", years: 3,
+    methodText: "Dosar academic și, la programele cu selecție, motivație și interviu. Se cere engleză C1.",
+    feeEUR: 2694, feeText: "2.694 €/an (taxa legală UE, 2026–2027)", deadline: "15 ianuarie dacă are selecție, altfel 1 mai (verifică)",
+    cut: { a: 8.4 }, focus: ["psiho", "istorie", "engleza"], url: "https://www.uu.nl/en/bachelors" },
+  { id: "nl-eur-ibeb", country: "NL", city: "Rotterdam", uni: "Erasmus University Rotterdam", fac: "",
+    program: "BSc International Bachelor Economics and Business Economics (IBEB)", domains: ["econ"], lang: "en", method: "mixt", years: 3,
+    methodText: "Program cu selecție: dosar, matematică la nivel avansat și, după caz, teste online. Se cere engleză C1.",
+    feeEUR: 2694, feeText: "2.694 €/an", deadline: "15 ianuarie 2027 (dacă are numerus fixus) – verifică",
+    cut: { a: 8.9 }, focus: ["economie", "mate"], reqProfile: ["mateinfo", "stnat"], url: "https://www.eur.nl/en/education/bachelor" },
+  { id: "de-tum-mt", country: "DE", city: "Heilbronn", uni: "Technische Universität München (TUM) – Campus Heilbronn", fac: "",
+    program: "BSc Management and Technology (EN)", domains: ["econ", "eng"], lang: "en", method: "mixt", years: 3,
+    methodText: "Program în engleză, cu procedură de evaluare a aptitudinilor (note și scrisoare de motivație). Pentru cetățenii UE, fără taxă de școlarizare.",
+    feeEUR: 300, feeText: "0 € taxă; contribuție semestrială ~150 €", deadline: "15 iulie (verifică)",
+    cut: { a: 8.6 }, focus: ["economie", "mate", "engleza"], url: "https://www.tum.de/en/studies/application" },
+  { id: "es-uam", country: "ES", city: "Madrid", uni: "Universidad Autónoma de Madrid", fac: "",
+    program: "Grado en Psicología / Biología", domains: ["psy", "bio"], lang: "es", method: "dosar", years: 4,
+    methodText: "UNEDasiss + PCE, apoi preînscriere în Comunidad de Madrid. Se predă în spaniolă.",
+    feeEUR: 1300, feeText: "≈ 1.000–1.600 €/an", deadline: "PCE în mai/iunie; preînscriere în iunie–iulie",
+    cut: { a: 8.6 }, focus: ["psiho", "bio"], url: "https://www.uam.es" },
+  { id: "se-chalmers", country: "SE", city: "Göteborg", uni: "Chalmers University of Technology", fac: "",
+    program: "Civilingenjör (inginerie, SV) / programe de licență", domains: ["eng", "it"], lang: "sv", method: "dosar", years: 5,
+    methodText: "Aplicare pe universityadmissions.se. Programele de licență se predau în suedeză (Svenska 3); multe mastere sunt în engleză.",
+    feeEUR: 0, feeText: "0 € pentru cetățenii UE", deadline: "16 oct. 2026 – 15 ian. 2027",
+    cut: { a: 8.7 }, focus: ["mate", "fizica", "info"], reqProfile: ["mateinfo", "stnat"], url: "https://www.chalmers.se/en/education/" },
+  { id: "us-umich-eng", country: "US", city: "Ann Arbor, Michigan", uni: "University of Michigan", fac: "College of Engineering",
+    program: "BSE Engineering (Computer, Mechanical, Aerospace)", domains: ["eng", "it"], lang: "en", method: "mixt", years: 4,
+    methodText: "Common App: note, eseuri, recomandări și activități. SAT/ACT opțional. Ingineria de la Michigan e printre cele mai bune programe publice din SUA.",
+    feeEUR: 57000, feeText: "≈ 60.000–65.000 $/an taxa pentru non-rezidenți", deadline: "1 noiembrie (Early Action) / 1 februarie",
+    cut: { a: 9.5 }, maxChance: 40, test: "optional", focus: ["mate", "fizica"], reqProfile: ["mateinfo", "stnat"], url: "https://admissions.umich.edu" }
+);
+
+/* ───────── Burse și sprijin financiar ─────────
+   rule: o funcție (S) => { ok: "da" | "poate" | "nu", why } evaluată pe răspunsurile elevului */
+const SCHOLARSHIPS = [
+  { id: "ro-merit", country: "RO", name: "Burse de performanță și de merit", amount: "~1.000–1.350 lei/lună (exemplu TUIASI 2026)", who: "Studenții la buget cu cele mai bune rezultate", url: "https://www.edu.ro",
+    rule: S => ({ ok: "da", why: "Se acordă la toate universitățile de stat, după media de admitere în anul I, apoi după rezultatele din fiecare semestru." }) },
+  { id: "ro-social", country: "RO", name: "Burse sociale", amount: "925 lei/lună (proiect național, 2026)", who: "Studenții din familii cu venituri mici", url: "https://www.capital.ro/burse-in-romania-de-peste-900-de-lei-luna-cine-poate-primi-banii-aplicatiile-trebuie-trimise-pana-pe-6-martie.html",
+    rule: S => ({ ok: "poate", why: "Depinde de venitul net lunar pe membru de familie. Se cer acte doveditoare la începutul anului universitar." }) },
+  { id: "ro-olimp", country: "RO", name: "Burse și admitere fără concurs pentru olimpici (HG 1004/2002)", amount: "bursă specială pe durata studiilor", who: "Premianții la olimpiadele școlare internaționale", url: "https://www.edu.ro",
+    rule: S => S.olymp === "int" ? { ok: "da", why: "Ai rezultate la etapa internațională: ai dreptul la admitere fără concurs și la bursă specială." }
+      : S.olymp === "nat" ? { ok: "poate", why: "Premiile la etapa națională aduc bonificații sau admitere fără examen la multe facultăți, dar bursa specială e pentru olimpicii internaționali." }
+      : { ok: "nu", why: "Se adresează olimpicilor cu premii la etapa internațională." } },
+  { id: "ro-rural", country: "RO", name: "Locuri la buget rezervate absolvenților de licee din mediul rural", amount: "loc la buget, fără taxă", who: "Absolvenții unui liceu din mediul rural", url: "https://admitere.pub.ro",
+    rule: S => ({ ok: "poate", why: "Dacă ai absolvit un liceu din mediul rural, concurezi și pe aceste locuri separate (de exemplu la UB și Politehnica)." }) },
+  { id: "ro-upb-grant", country: "RO", name: "Granturi de școlarizare POLITEHNICA București", amount: "acoperă taxa, parțial sau integral", who: "Studenții admiși pe locuri cu taxă la UNSTPB", url: "https://admitere.pub.ro",
+    rule: S => ({ ok: "poate", why: "Universitatea poate acorda granturi din bugetul propriu admișilor la taxă, în limita locurilor stabilite." }) },
+  { id: "eu-erasmus", country: "EU", name: "Erasmus+ (semestru sau an în străinătate)", amount: "~300–700 €/lună, în funcție de țară", who: "Orice student înmatriculat într-o universitate cu acord Erasmus", url: "https://erasmus-plus.ec.europa.eu",
+    rule: S => ({ ok: "da", why: "Te poți înscrie după primul an de facultate, oriunde ai studia în UE. Nu acoperă o licență întreagă, ci 3–12 luni." }) },
+  { id: "de-deutschland", country: "DE", name: "Deutschlandstipendium", amount: "300 €/lună", who: "Studenți cu rezultate foarte bune, inclusiv internaționali", url: "https://www.deutschlandstipendium.de",
+    rule: S => ({ ok: "da", why: "Nu contează cetățenia: aplici la universitatea la care ești înmatriculat, pe criterii de merit și implicare." }) },
+  { id: "de-daad", country: "DE", name: "Burse DAAD", amount: "variabil", who: "Mai ales masteranzi și doctoranzi", url: "https://www.daad.de/en/",
+    rule: S => ({ ok: "nu", why: "Pentru licență, DAAD oferă în principal cursuri de vară de limbă, nu burse pentru toată licența." }) },
+  { id: "de-bafog", country: "DE", name: "BAföG (sprijin de stat german)", amount: "până la ~990 €/lună (jumătate grant, jumătate împrumut)", who: "Cetățeni UE cu ședere sau statut de lucrător în Germania", url: "https://www.bafög.de",
+    rule: S => ({ ok: "poate", why: "Ca cetățean UE, primești BAföG doar în anumite condiții, de exemplu după 5 ani de ședere sau dacă un părinte lucrează în Germania." }) },
+  { id: "nl-duo-loan", country: "NL", name: "Împrumut DUO pentru taxa de școlarizare (collegegeldkrediet)", amount: "acoperă taxa legală", who: "Cetățenii UE la prima licență în Olanda", url: "https://duo.nl/particulier/international-student/",
+    rule: S => ({ ok: "da", why: "Ești cetățean UE, deci poți împrumuta taxa de la statul olandez, cu dobândă mică și rambursare după studii." }) },
+  { id: "nl-studiefin", country: "NL", name: "Studiefinanciering (bursă și împrumut pentru trai)", amount: "variabil", who: "Cetățeni UE care lucrează cel puțin 56 de ore pe lună în Olanda", url: "https://duo.nl/particulier/international-student/",
+    rule: S => ({ ok: "poate", why: "O primești dacă ai un job de cel puțin 56 de ore pe lună sau drept de ședere permanentă." }) },
+  { id: "nl-holland", country: "NL", name: "Holland Scholarship", amount: "5.000 € o singură dată", who: "Studenți din afara SEE", url: "https://www.studyinnl.org",
+    rule: S => ({ ok: "nu", why: "Este doar pentru studenții din afara Spațiului Economic European; cetățenii români nu sunt eligibili." }) },
+  { id: "es-mec", country: "ES", name: "Becas del Ministerio de Educación (MEC)", amount: "taxa + o sumă fixă + bani pentru trai", who: "Studenți din UE cu rezidență în Spania", url: "https://www.becaseducacion.gob.es",
+    rule: S => ({ ok: "poate", why: "Cetățenii UE pot aplica, dar de regulă se cere rezidență în Spania (de exemplu, familia să locuiască acolo)." }) },
+  { id: "it-dsu", country: "IT", name: "Burse regionale DSU (ER.GO, DiSCo, ESU etc.)", amount: "scutire de taxă + cazare + până la câteva mii €/an", who: "Studenți din UE, în funcție de venitul familiei", url: "https://www.universitaly.it",
+    rule: S => ({ ok: "poate", why: "Ești eligibil(ă) ca cetățean UE dacă venitul familiei (ISEE echivalent) e sub prag. După primul an trebuie să ai un număr minim de credite." }) },
+  { id: "fr-crous", country: "FR", name: "Bourse sur critères sociaux (CROUS) + ajutor de chirie APL", amount: "~1.500–6.300 €/an (bursa) + APL lunar", who: "Studenți din UE cu legătură cu Franța; APL pentru toți studenții cu ședere legală", url: "https://www.messervices.etudiant.gouv.fr",
+    rule: S => ({ ok: "poate", why: "APL o primești aproape sigur. Bursa CROUS o primești doar dacă un părinte lucrează în Franța sau după o perioadă de ședere." }) },
+  { id: "dk-su", country: "DK", name: "SU (sprijinul de stat danez)", amount: "~6.000 DKK/lună înainte de impozit", who: "Cetățeni UE cu statut de lucrător în Danemarca", url: "https://www.su.dk/english",
+    rule: S => ({ ok: "poate", why: "O primești dacă ai un job de regulă de cel puțin 10–12 ore pe săptămână pe toată durata studiilor." }) },
+  { id: "at-beihilfe", country: "AT", name: "Studienbeihilfe", amount: "variabil, în funcție de venit", who: "Cetățeni UE cu ședere sau statut de lucrător în Austria", url: "https://www.stipendium.at",
+    rule: S => ({ ok: "poate", why: "Pentru cetățenii UE se cer, de regulă, statut de lucrător sau mai mulți ani de ședere în Austria." }) },
+  { id: "ie-freefees", country: "IE", name: "Free Fees Initiative", amount: "taxa de școlarizare plătită de stat", who: "Cetățeni UE care au locuit în UE cel puțin 3 din ultimii 5 ani", url: "https://www.cao.ie",
+    rule: S => ({ ok: "da", why: "Ai locuit în România, deci în UE: statul irlandez îți plătește taxa; rămâne contribuția de 2.500 €/an." }) },
+  { id: "ie-susi", country: "IE", name: "Grantul SUSI", amount: "contribuția studențească + bani pentru trai", who: "Studenți cu rezidență în Irlanda", url: "https://susi.ie",
+    rule: S => ({ ok: "nu", why: "Cere de regulă rezidență în Irlanda în anii dinaintea studiilor, deci nu se aplică elevilor care pleacă direct din România." }) },
+  { id: "us-needblind", country: "US", name: "Ajutor financiar complet: MIT, Harvard, Yale, Princeton, Amherst, Dartmouth", amount: "până la 100% din cost", who: "Studenți internaționali admiși, în funcție de venitul familiei", url: "https://mitadmissions.org/afford/",
+    rule: S => ({ ok: "da", why: "Aceste universități nu țin cont de venit la admitere și acoperă integral nevoia financiară demonstrată, inclusiv pentru internaționali. Admiterea însă e extrem de competitivă." }) },
+  { id: "us-ncaa", country: "US", name: "Burse sportive NCAA", amount: "parțial sau integral", who: "Sportivi de performanță", url: "https://www.ncaa.org",
+    rule: S => S.subjects.includes("sport") || S.profile === "sport" ? { ok: "da", why: "Ai profil sportiv: antrenorii universităților americane recrutează sportivi internaționali și oferă burse." }
+      : { ok: "nu", why: "Se adresează sportivilor de performanță." } },
+  { id: "ca-pearson", country: "CA", name: "Lester B. Pearson International Scholarship (University of Toronto)", amount: "taxă + trai, 4 ani", who: "Internaționali excepționali, nominalizați de liceu", url: "https://future.utoronto.ca/pearson/",
+    rule: S => ({ ok: "poate", why: "Ai nevoie de note de top, activități remarcabile și nominalizare din partea liceului. Termenul e în toamnă." }) },
+  { id: "ca-ubc-imes", country: "CA", name: "International Major Entrance Scholarship (UBC)", amount: "parțial, pe toată durata studiilor", who: "Internaționali cu rezultate foarte bune", url: "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/",
+    rule: S => ({ ok: "poate", why: "Ești luat(ă) în calcul automat dacă ai rezultate foarte bune și implicare." }) },
+  { id: "gb-uni", country: "GB", name: "Burse ale universităților britanice pentru internaționali", amount: "~1.000–10.000 £/an", who: "Studenți internaționali cu rezultate foarte bune", url: "https://www.ucas.com/finance/scholarships-grants-and-bursaries",
+    rule: S => ({ ok: "poate", why: "Sunt puține și competitive; acoperă de regulă doar o parte din taxă." }) },
+  { id: "ch-none", country: "CH", name: "Burse pentru licență în Elveția", amount: "rare", who: "Studenți străini", url: "https://ethz.ch/en/studies/financial.html",
+    rule: S => ({ ok: "nu", why: "Bursele ETH și EPFL sunt mai ales pentru master; la licență, bugetul trebuie să acopere traiul, care e foarte scump." }) }
+];
+
+/* ───────── Calendar de termene (ciclul pentru intrarea la facultate în toamna lui 2027) ─────────
+   Pentru elevii de clasa a XI-a, aplicația adaugă un an la toate datele. */
+const TIMELINE = {
+  ALL: [
+    { d: "2026-12-15", t: "Alege 5–10 programe și salvează-le în „Lista mea” din UniFinder." },
+    { d: "2027-06-15", t: "Bacalaureatul (sesiunea iunie–iulie); diploma o primești de regulă în august." }
+  ],
+  RO: [
+    { d: "2026-12-15", t: "Politehnica București deschide admiterea anticipată (până în iunie)." },
+    { d: "2027-03-01", t: "Începe pregătirea intensă pentru examenele de admitere (grile, culegeri)." },
+    { d: "2027-07-10", t: "Înscrieri la facultățile din România, sesiunea I (iulie)." },
+    { d: "2027-07-25", t: "Examenele de admitere la Medicină și Drept (de regulă a doua jumătate a lunii iulie)." },
+    { d: "2027-09-05", t: "Sesiunea a II-a de admitere pentru locurile rămase libere." }
+  ],
+  NL: [
+    { d: "2027-01-15", t: "Olanda: termen Studielink pentru programele numerus fixus." },
+    { d: "2027-05-01", t: "Olanda: termen Studielink pentru majoritatea programelor." }
+  ],
+  DE: [{ d: "2027-07-15", t: "Germania: termen de aplicare pentru semestrul de iarnă (uni-assist / hochschulstart)." }],
+  ES: [
+    { d: "2027-03-16", t: "Spania: se deschid înscrierile la probele PCE (UNEDasiss), până la sfârșitul lui aprilie." },
+    { d: "2027-05-25", t: "Spania: probele PCE." },
+    { d: "2027-06-20", t: "Spania: preînscrierea la universități (iunie–iulie)." }
+  ],
+  NO: [{ d: "2027-03-01", t: "Norvegia: termen Samordna opptak pentru candidații cu diplomă din străinătate." }],
+  SE: [
+    { d: "2026-10-16", t: "Suedia: se deschid aplicațiile pe universityadmissions.se." },
+    { d: "2027-01-15", t: "Suedia: termen de aplicare pentru toamna lui 2027." },
+    { d: "2027-02-01", t: "Suedia: termen pentru documente." }
+  ],
+  US: [
+    { d: "2026-10-31", t: "SUA: ultimul SAT util pentru aplicațiile din noiembrie." },
+    { d: "2026-11-01", t: "SUA: termen Early Action / Early Decision (Common App)." },
+    { d: "2026-11-30", t: "SUA: termen University of California." },
+    { d: "2027-01-01", t: "SUA: termen Regular Decision la multe universități (1–15 ianuarie)." },
+    { d: "2027-05-01", t: "SUA: decizia finală și avansul la universitatea aleasă." }
+  ],
+  GB: [
+    { d: "2026-10-15", t: "Marea Britanie: termen UCAS pentru Oxford, Cambridge și Medicină." },
+    { d: "2027-01-13", t: "Marea Britanie: termen UCAS pentru celelalte programe." }
+  ],
+  IT: [
+    { d: "2027-02-01", t: "Italia: încep rundele de aplicare pentru programele în engleză (verifică universitatea)." },
+    { d: "2027-07-15", t: "Italia: aplică la bursa regională DSU (iulie–septembrie)." }
+  ],
+  FR: [
+    { d: "2027-01-15", t: "Franța: începe înscrierea pe Parcoursup (aproximativ jumătatea lui ianuarie – jumătatea lui martie)." },
+    { d: "2027-04-01", t: "Franța: termen pentru confirmarea dosarului Parcoursup (verifică data exactă)." }
+  ],
+  DK: [{ d: "2027-03-15", t: "Danemarca: termen optagelse.dk (ora 12:00)." }],
+  AT: [
+    { d: "2027-03-01", t: "Austria: înscrieri la testele de admitere (inclusiv MedAT)." },
+    { d: "2027-09-05", t: "Austria: termen general de aplicare pentru semestrul de iarnă." }
+  ],
+  IE: [{ d: "2027-02-01", t: "Irlanda: termen CAO." }],
+  CH: [{ d: "2027-04-30", t: "Elveția: termen de aplicare la ETH Zürich și EPFL (verifică)." }],
+  CA: [
+    { d: "2026-11-15", t: "Canada: termene pentru bursele mari (de exemplu Lester B. Pearson), noiembrie–decembrie." },
+    { d: "2027-01-15", t: "Canada: termen de aplicare la Toronto, UBC și McGill." }
+  ],
+  EN: [{ d: "2026-12-10", t: "Programează IELTS / Cambridge C1 dacă încă nu ai certificat de engleză." }],
+  FRLANG: [{ d: "2026-12-05", t: "Susține DELF B2 (franceză) înainte de Parcoursup." }]
+};
+
+SOURCES.push(
+  ["UCAS – termene pentru intrarea în 2027", "https://www.ucas.com/events/2027-entry-deadline-for-the-universities-of-oxford-and-cambridge-and-most-courses-in-medicine-475536"],
+  ["Imperial College – termene UCAS și teste", "https://www.imperial.ac.uk/study/apply/undergraduate/process/deadlines/"],
+  ["University of Galway – contribuția studențească 2026/27", "https://universityofgalway.ie/student-fees/faqs/"],
+  ["IamExpat – taxele ETH și EPFL pentru studenți străini", "https://www.iamexpat.ch/education/education-news/tuition-fees-internationals-eth-and-epfl-be-tripled-2025"],
+  ["Politecnico di Milano – taxe pentru studenți cu venituri din străinătate", "https://www.polimi.it/en/students/tuition-fees-scholarships-and-financial-aid/tuition-fees/students-with-income-and-property-abroad"],
+  ["Service-public.fr – taxele de înscriere 2026–2027", "https://www.service-public.gouv.fr/particuliers/actualites/A17481"],
+  ["CBS – termenul de 15 martie pentru diplome străine", "https://www.cbs.dk/en/news/foreign-upper-secondary-exam-application-deadline-15-march"],
+  ["UMF „Iuliu Hațieganu” – Ghid de admitere 2026", "https://cdn.umfcluj.ro/uploads/2026/07/GHID-ADMITERE-2026.pdf"],
+  ["Edupedu – Admitere 2026 la UTCN", "https://www.edupedu.ro/admitere-facultate-2026-la-utcn-mai-multe-locuri-la-buget-inscriere-simplificata-online-plus-cazare-gratuita-de-la-inteligenta-artificiala-si-automatica-la-arhitectura-p/"]
+);
+
 </script>
   <script>
 /* UniFinder Global — logica chestionarului și a recomandărilor */
 (function () {
   "use strict";
 
-  const STORE_KEY = "unifinder-state-v1";
-  const STEP_LABELS = ["Profil & materii", "Note & examene", "Domenii", "Buget", "Țară"];
+  const STORE_KEY = "unifinder-state-v2";
+  const STEP_LABELS = ["Profil & materii", "Note & examene", "Carieră", "Domenii", "Buget", "Țară"];
+  const METHOD = { dosar: "Admitere pe dosar", examen: "Admitere prin examen", mixt: "Dosar + probă / selecție", vocational: "Probă vocațională" };
+  const LANGS = { ro: "Română", en: "Engleză", "en-ro": "Engleză", de: "Germană", es: "Spaniolă", fr: "Franceză", no: "Norvegiană", sv: "Suedeză" };
+
+  const SALARY_TARGETS = [
+    { id: "none", label: "Nu e prioritatea mea", sub: "aleg în primul rând după ce îmi place" },
+    { id: "5500", label: "Peste 5.500 lei", sub: "în jurul salariului mediu net pe economie" },
+    { id: "7500", label: "Peste 7.500 lei", sub: "peste medie" },
+    { id: "10000", label: "Peste 10.000 lei", sub: "domeniile cel mai bine plătite" }
+  ];
+  const WORK_WHERE = [
+    { id: "ro", label: "În România" },
+    { id: "study", label: "În țara în care studiez" },
+    { id: "unknown", label: "Nu știu încă" }
+  ];
 
   const BUDGETS = [
     { id: "free", max: 400, label: "Doar gratuit", sub: "Loc la buget în România sau țări fără taxe (DE, NO, SE)" },
@@ -1232,6 +2275,11 @@ const SOURCES = [
     { id: "b1", label: "A2 – B1" },
     { id: "b2", label: "B2+ (DELE)" }
   ];
+  const FRENCH = [
+    { id: "no", label: "Nu știu / nu doresc" },
+    { id: "b1", label: "A2 – B1" },
+    { id: "b2", label: "B2+ (DELF / TCF)" }
+  ];
   const NORDIC = [
     { id: "no", label: "Nu știu" },
     { id: "start", label: "Am început să învăț" },
@@ -1252,13 +2300,14 @@ const SOURCES = [
   const defaultState = () => ({
     step: 0, profile: "", clasa: "12", subjects: [],
     en: "", gpa: "", bac: "", bacUnknown: true,
-    english: "", sat: "", german: "no", spanish: "no", nordic: "no", olymp: "no", prep: "",
+    english: "", sat: "", german: "no", spanish: "no", french: "no", nordic: "no", olymp: "no", prep: "",
+    salary: "none", work: [], workWhere: "unknown", levels: Object.keys(LEVELS),
     domains: [], budget: "", countries: [], learnLang: false, showOver: false
   });
 
   let S = load() || defaultState();
   let resultsCache = null;
-  let view = { sort: "fit", country: "all", tab: null };
+  let view = { sort: "fit", country: "all", tab: null, parent: false };
 
   // ───────────── utilitare ─────────────
   function load() {
@@ -1270,6 +2319,13 @@ const SOURCES = [
   function save() {
     try { localStorage.setItem(STORE_KEY, JSON.stringify(S)); } catch (e) { /* stocare indisponibilă */ }
   }
+  // „Lista mea”: programele salvate, păstrate separat ca să nu se piardă la refacerea testului
+  const SAVED_KEY = "unifinder-saved-v1";
+  let saved = (() => { try { return JSON.parse(localStorage.getItem(SAVED_KEY)) || []; } catch (e) { return []; } })()
+    .filter(id => PROGRAMS.some(p => p.id === id));
+  function saveSaved() { try { localStorage.setItem(SAVED_KEY, JSON.stringify(saved)); } catch (e) { /* stocare indisponibilă */ } }
+  const progById = id => PROGRAMS.find(p => p.id === id);
+  const quizDone = () => S.countries.length && S.domains.length && S.budget && S.gpa;
   const $ = (sel, root = document) => root.querySelector(sel);
   const num = v => { const n = parseFloat(String(v).replace(",", ".")); return isFinite(n) ? n : null; };
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -1286,6 +2342,11 @@ const SOURCES = [
     return `<div class="${cls}">` + items.map(it => `
       <label class="opt chip"><input type="checkbox" name="${name}" value="${it.id}" ${current.includes(it.id) ? "checked" : ""}>
         <span>${it.label}</span></label>`).join("") + `</div>`;
+  }
+  function checkCards(name, items, current, cls = "options") {
+    return `<div class="${cls}">` + items.map(it => `
+      <label class="opt"><input type="checkbox" name="${name}" value="${it.id}" ${current.includes(it.id) ? "checked" : ""}>
+        <span><span>${it.label}${it.sub ? `<small>${it.sub}</small>` : ""}</span></span></label>`).join("") + `</div>`;
   }
 
   // ───────────── calcule ─────────────
@@ -1311,9 +2372,55 @@ const SOURCES = [
       const pw = d.prof[S.profile] || 0;
       s += pw * 1.2;
       if (pw >= 2) why.push("profilul tău");
-      const pct = Math.round(clamp(100 * s / (totalSubj + 3.6), 0, 99));
-      return { d, pct, why };
+      const cf = careerFit(d.id);
+      const pct = Math.round(clamp(100 * s / (totalSubj + 3.6) + cf.adj, 0, 99));
+      return { d, pct, why, cf };
     }).sort((a, b) => b.pct - a.pct);
+  }
+
+  // cât de bine se potrivește un domeniu cu salariul țintit și cu programul de lucru dorit
+  function careerFit(id) {
+    const c = CAREER[id], tags = [];
+    let adj = 0;
+    const target = +S.salary || 0;
+    if (target) {
+      if (c.five >= target) { adj += 8; tags.push({ t: "atinge salariul țintit", good: true }); }
+      else { adj -= Math.min(20, Math.round((target - c.five) / target * 40)); tags.push({ t: "sub salariul țintit" }); }
+    }
+    if (S.work.length) {
+      const m = c.work.filter(w => S.work.includes(w));
+      if (m.length) { adj += 5; tags.push({ t: m.map(w => byId(WORK_STYLES, w).label.toLowerCase()).join(", "), good: true }); }
+      else adj -= 5;
+    }
+    return { adj, tags };
+  }
+
+  // investiția totală în studii și câte luni de salariu net de început înseamnă
+  function roi(p) {
+    const c = COUNTRIES[p.country], y = yearsOf(p);
+    const dom = p.domains.find(d => S.domains.includes(d)) || p.domains[0];
+    const base = p.salary || CAREER[dom];
+    const abroad = p.country !== "RO" && S.workWhere !== "ro";
+    const k = abroad ? c.salaryFactor : 1;
+    const startEUR = base.start / EUR_LEI * k;
+    const tuition = (p.country === "RO" ? 0 : p.feeEUR) * y; // în România calculăm pe loc la buget
+    const living = c.livingEUR * c.months * y;
+    const stipend = (p.stipendEUR || 0) * 12 * y;
+    const total = Math.max(0, tuition + living - stipend);
+    return { y, dom, abroad, k, base, startEUR, tuition, living, stipend, total, months: total / startEUR,
+      extraFee: p.country === "RO" ? p.feeEUR * y : 0, where: abroad ? c.name : "România" };
+  }
+  const r100 = n => Math.round(n / 100) * 100;
+  const yrs = y => `${y.toLocaleString("ro-RO")} ani`;
+  function salaryText(ro) {
+    return ro.abroad
+      ? `~${fmt(r100(ro.startEUR))} € la început · ~${fmt(r100(ro.base.five / EUR_LEI * ro.k))} € după 5 ani`
+      : `~${fmt(ro.base.start)} lei la început · ~${fmt(ro.base.five)} lei după 5 ani`;
+  }
+  function roiTag(m) {
+    if (m <= 18) return ["Recuperare rapidă", "high"];
+    if (m <= 36) return ["Recuperare medie", "mid"];
+    return ["Recuperare lentă", "low"];
   }
 
   function englishLevel() {
@@ -1363,14 +2470,21 @@ const SOURCES = [
       if (en >= 2) notes.push({ t: "Certificatul de engleză te poate scuti de testul de limbă al facultății.", good: true });
       else notes.push({ t: "Vei susține un test de limbă engleză eliminatoriu la facultate." });
     } else if (p.lang === "de") {
-      if (S.german === "c1") notes.push({ t: "Ai nivelul C1 la germană cerut pentru licențele predate în germană.", good: true });
+      const b2ok = p.langMin === "b2";
+      if (b2ok && (S.german === "b2" || S.german === "c1")) notes.push({ t: "Nivelul tău de germană este suficient pentru programul dual (minimum B2).", good: true });
+      else if (S.german === "c1") notes.push({ t: "Ai nivelul C1 la germană cerut pentru licențele predate în germană.", good: true });
       else if (S.german === "b2") { eff -= 0.4; notes.push({ t: "Ai nevoie de C1 (DSH-2 / TestDaF / DSD II). De la B2 se poate ajunge la C1 în câteva luni de curs intensiv." }); }
-      else if (S.learnLang) { eff -= 0.8; notes.push({ t: "Programul se predă în germană, nivel C1. Ar fi nevoie de 1–2 ani de studiu intensiv al limbii." }); }
+      else if (S.learnLang) { eff -= 0.8; notes.push({ t: b2ok ? "Programul cere germană cel puțin B2 (de exemplu DSD II). Plănuiește un an de studiu intensiv al limbii." : "Programul se predă în germană, nivel C1. Ar fi nevoie de 1–2 ani de studiu intensiv al limbii." }); }
       else gate = false;
     } else if (p.lang === "es") {
       if (S.spanish === "b2") notes.push({ t: "Ai nivelul B2 recomandat la spaniolă.", good: true });
       else if (S.spanish === "b1") { eff -= 0.3; notes.push({ t: "Este recomandat nivelul B2 la spaniolă (DELE)." }); }
       else if (S.learnLang) { eff -= 0.6; notes.push({ t: "Programul se predă în spaniolă: ai nevoie de nivelul B2 până la începerea studiilor." }); }
+      else gate = false;
+    } else if (p.lang === "fr") {
+      if (S.french === "b2") notes.push({ t: "Ai nivelul B2 la franceză cerut de universități.", good: true });
+      else if (S.french === "b1") { eff -= 0.3; notes.push({ t: "Universitățile cer de regulă franceză B2 (DELF B2 sau TCF)." }); }
+      else if (S.learnLang) { eff -= 0.7; notes.push({ t: "Programul se predă în franceză: ai nevoie de DELF B2 până la aplicare." }); }
       else gate = false;
     } else if (p.lang === "no" || p.lang === "sv") {
       const lname = p.lang === "no" ? "norvegiană (Bergenstest)" : "suedeză (Svenska 3)";
@@ -1403,11 +2517,15 @@ const SOURCES = [
     const budget = byId(BUDGETS, S.budget) || BUDGETS[4];
     let res = { p, notes, gate, eff };
 
+    if (p.noBac) notes.push({ t: "Te poți înscrie și fără diplomă de bacalaureat.", good: true });
+    if (p.level === "dual") notes.push({ t: "Pe lângă dosarul academic, treci printr-o selecție la companie: pregătește un CV și o scrisoare de intenție." });
+
     if (p.country === "RO") {
+      const hasFee = p.feeEUR > 0; // școlile postliceale de stat și programele duale nu au locuri cu taxă
       res.cb = chance(p.cut.b);
       res.ct = chance(p.cut.t);
       res.feeOk = p.feeEUR <= budget.max;
-      res.main = res.feeOk ? Math.max(res.cb, res.ct * 0.92) : res.cb;
+      res.main = hasFee && res.feeOk ? Math.max(res.cb, res.ct * 0.92) : res.cb;
       res.overBudget = !res.feeOk && res.cb < 15;
       if (!res.feeOk) notes.unshift({ t: `Doar locul la buget se încadrează în bugetul tău; taxa este ${p.feeText.split("(")[0].trim()}.` });
     } else {
@@ -1421,6 +2539,7 @@ const SOURCES = [
     // potrivirea = șanse (plafonate, ca programele „prea sigure” să nu domine) + domeniu + materii preferate
     const dom = Math.max(...p.domains.filter(d => S.domains.includes(d)).map(d => domainPct[d] || 0), 0);
     res.rank = 0.55 * Math.min(res.main, 80) + 0.25 * dom + 20 * fit;
+    res.roi = roi(p);
     return res;
   }
 
@@ -1428,6 +2547,7 @@ const SOURCES = [
     const domainPct = Object.fromEntries(domainScores().map(x => [x.d.id, x.pct]));
     const all = PROGRAMS
       .filter(p => S.countries.includes(p.country))
+      .filter(p => S.levels.includes(p.level || "licenta"))
       .filter(p => p.domains.some(d => S.domains.includes(d)))
       .map(p => evaluate(p, domainPct));
     langHidden = all.filter(r => !r.gate).length;
@@ -1485,6 +2605,7 @@ const SOURCES = [
         <fieldset class="q-block"><legend>Alte limbi pentru studii în străinătate</legend>
           <p class="q-label">Germană</p>${radioGroup("german", GERMAN, S.german, "options compact")}
           <p class="q-label" style="margin-top:14px">Spaniolă</p>${radioGroup("spanish", SPANISH, S.spanish, "options compact")}
+          <p class="q-label" style="margin-top:14px">Franceză</p>${radioGroup("french", FRENCH, S.french, "options compact")}
           <p class="q-label" style="margin-top:14px">Norvegiană sau suedeză</p>${radioGroup("nordic", NORDIC, S.nordic, "options compact")}</fieldset>
         <fieldset class="q-block"><legend>Olimpiade școlare</legend>
           ${radioGroup("olymp", OLYMP, S.olymp, "options compact")}</fieldset>
@@ -1498,7 +2619,7 @@ const SOURCES = [
       read: f => {
         S.en = f.en.value.trim(); S.gpa = f.gpa.value.trim(); S.bac = f.bac.value.trim();
         S.bacUnknown = f.bacUnknown.checked;
-        ["english", "sat", "german", "spanish", "nordic", "olymp", "prep"].forEach(k => {
+        ["english", "sat", "german", "spanish", "french", "nordic", "olymp", "prep"].forEach(k => {
           const el = f.querySelector(`input[name=${k}]:checked`); S[k] = el ? el.value : "";
         });
       },
@@ -1514,6 +2635,31 @@ const SOURCES = [
       }
     },
     {
+      render: () => `
+        <div class="step-head"><p class="step-kicker">Opțional · perspectiva de carieră</p>
+          <h2>Cum vrei să arate viața ta după studii?</h2>
+          <p>Alege și ca viitor angajat, nu doar ca elev. Dacă nu te-ai gândit încă la asta, lasă variantele implicite și mergi mai departe.</p></div>
+        <fieldset class="q-block"><legend>Ce salariu net pe lună țintești după aproximativ 5 ani de carieră?</legend>
+          <p class="q-help">Comparăm cu estimări pe domenii pentru România. Domeniile care ating ținta urcă în recomandări.</p>
+          ${radioGroup("salary", SALARY_TARGETS, S.salary, "options pair")}</fieldset>
+        <fieldset class="q-block"><legend>Ce program de lucru ți-ai dori?</legend>
+          <p class="q-help">Poți alege mai multe variante sau niciuna.</p>
+          ${checkCards("work", WORK_STYLES, S.work, "options pair")}</fieldset>
+        <fieldset class="q-block"><legend>Unde te vezi lucrând după studii?</legend>
+          <p class="q-help">Contează la calculul recuperării investiției, pentru că salariile diferă mult de la o țară la alta.</p>
+          ${radioGroup("workWhere", WORK_WHERE, S.workWhere, "options compact")}</fieldset>
+        <fieldset class="q-block"><legend>Ce fel de studii iei în calcul?</legend>
+          <p class="q-help">Facultatea nu e singurul drum: există și școli postliceale, programe duale cu practică plătită și universități de științe aplicate.</p>
+          ${checkCards("levels", Object.entries(LEVELS).map(([id, l]) => ({ id, label: l.label, sub: l.sub })), S.levels, "options pair")}</fieldset>`,
+      read: f => {
+        S.salary = (f.querySelector("input[name=salary]:checked") || {}).value || "none";
+        S.workWhere = (f.querySelector("input[name=workWhere]:checked") || {}).value || "unknown";
+        S.work = [...f.querySelectorAll("input[name=work]:checked")].map(i => i.value);
+        S.levels = [...f.querySelectorAll("input[name=levels]:checked")].map(i => i.value);
+      },
+      validate: () => S.levels.length ? "" : "Alege cel puțin un tip de studii."
+    },
+    {
       render: () => {
         const scores = domainScores();
         const top = scores.filter(x => x.pct >= 35).slice(0, 4);
@@ -1522,12 +2668,14 @@ const SOURCES = [
           <label class="opt domain-opt"><input type="checkbox" name="domains" value="${x.d.id}" ${S.domains.includes(x.d.id) ? "checked" : ""}>
             <span><span class="d-top"><span class="d-name">${x.d.label}</span><span class="match ${x.pct < 35 ? "low" : ""}">${x.pct}% potrivire</span></span>
               <span class="d-desc">${x.d.desc}</span>
-              ${x.why.length ? `<span class="d-why">Pentru că: ${x.why.slice(0, 3).join(", ")}</span>` : ""}</span></label>`;
+              ${x.why.length ? `<span class="d-why">Pentru că: ${x.why.slice(0, 3).join(", ")}</span>` : ""}
+              <span class="d-sal">Salariu net estimat: ~${fmt(CAREER[x.d.id].start)} lei la început · ~${fmt(CAREER[x.d.id].five)} lei după 5 ani</span>
+              ${x.cf.tags.length ? `<span class="d-tags">${x.cf.tags.map(t => `<i class="${t.good ? "ok" : "no"}">${t.t}</i>`).join("")}</span>` : ""}</span></label>`;
         const topIds = top.map(x => x.d.id);
         return `
           <div class="step-head"><p class="step-kicker">Sugestii pentru tine</p>
             <h2>Domeniile în care te vezi la facultate</h2>
-            <p>Pe baza profilului și a materiilor alese îți recomandăm domeniile de mai jos. Le-am bifat pe cele mai potrivite, dar poți adăuga sau scoate oricâte.</p></div>
+            <p>Pe baza profilului, a materiilor alese și a preferințelor tale de carieră îți recomandăm domeniile de mai jos. Le-am bifat pe cele mai potrivite, dar poți adăuga sau scoate oricâte. Salariile sunt estimări orientative pentru România.</p></div>
           <p class="sub-title">Recomandate</p>
           <div class="domain-grid">${top.map(card).join("") || "<p>Alege din lista de mai jos.</p>"}</div>
           <p class="sub-title">Alte domenii care te-ar putea interesa</p>
@@ -1549,10 +2697,10 @@ const SOURCES = [
       render: () => `
         <div class="step-head"><p class="step-kicker">Filtrul 4 din 4</p>
           <h2>În ce țări ai vrea să studiezi?</h2>
-          <p>Poți alege mai multe țări și le compari în rezultate.</p></div>
+          <p>Poți alege mai multe țări și le compari în rezultate. Avem ${Object.keys(COUNTRIES).length} țări, în Europa și peste ocean.</p></div>
         <fieldset class="q-block"><legend class="sr-only">Țări</legend>
           ${checkGroup("countries", Object.entries(COUNTRIES).map(([id, c]) => ({ id, label: `${flag(id)} ${c.name}` })), S.countries, "options compact")}</fieldset>
-        <fieldset class="q-block"><legend>Ești dispus(ă) să înveți limba țării (germană, spaniolă, norvegiană, suedeză)?</legend>
+        <fieldset class="q-block"><legend>Ești dispus(ă) să înveți limba țării (germană, franceză, spaniolă, norvegiană, suedeză)?</legend>
           <p class="q-help">Dacă nu, îți arătăm doar programele în limbi pe care le știi deja (română, engleză sau cele bifate la pasul 2).</p>
           ${radioGroup("learnLang", [{ id: "yes", label: "Da, îmi asum un an de limbă" }, { id: "no", label: "Nu, doar limbi pe care le știu" }], S.learnLang ? "yes" : "no", "options compact")}</fieldset>`,
       read: f => {
@@ -1592,9 +2740,9 @@ const SOURCES = [
     st.read(form);
     const msg = st.validate();
     if (msg) { err.textContent = msg; return; }
-    // dacă se schimbă profilul sau materiile, recalculăm sugestiile de domenii
-    if (S.step === 0) {
-      const sig = S.profile + "|" + S.subjects.join(",");
+    // dacă se schimbă profilul, materiile sau preferințele de carieră, recalculăm sugestiile de domenii
+    if (S.step === 0 || S.step === 2) {
+      const sig = [S.profile, S.subjects.join(","), S.salary, S.work.join(",")].join("|");
       if (sig !== S.sig) { S.domains = []; S.sig = sig; }
     }
     if (S.step < steps.length - 1) {
@@ -1615,7 +2763,7 @@ const SOURCES = [
   // ───────────── rezultate ─────────────
   function showResults() {
     resultsCache = computeResults();
-    view = { sort: "fit", country: "all", tab: S.countries[0] };
+    view = { sort: "fit", country: "all", tab: S.countries[0], parent: false };
     $("#quiz").hidden = true;
     const r = $("#results");
     r.hidden = false;
@@ -1635,7 +2783,10 @@ const SOURCES = [
       S.bacUnknown ? "Bac: estimat" : `Bac ${num(S.bac).toFixed(2)}`,
       eng && `Engleză: ${eng.label}`,
       S.german !== "no" ? `Germană ${byId(GERMAN, S.german).label}` : null,
+      S.french !== "no" ? `Franceză ${byId(FRENCH, S.french).label}` : null,
       S.olymp !== "no" ? `Olimpiadă: ${byId(OLYMP, S.olymp).label.toLowerCase()}` : null,
+      S.salary !== "none" ? `Salariu țintă: ${byId(SALARY_TARGETS, S.salary).label.toLowerCase()}` : null,
+      S.work.length ? `Program: ${S.work.map(w => byId(WORK_STYLES, w).label.toLowerCase()).join(", ")}` : null,
       `Buget: ${byId(BUDGETS, S.budget).label}`
     ].filter(Boolean);
     const level = idx >= 9.3 ? "Ești în zona de top: poți ținti programele cele mai competitive." :
@@ -1654,24 +2805,30 @@ const SOURCES = [
   }
 
   function progCard(r) {
-    const p = r.p, c = COUNTRIES[p.country];
-    const methodMap = { dosar: "Admitere pe dosar", examen: "Admitere prin examen", mixt: "Dosar + probă / selecție", vocational: "Probă vocațională" };
+    const p = r.p, c = COUNTRIES[p.country], ro = r.roi;
+    const methodMap = METHOD;
+    const [roiLabel, roiCls] = roiTag(ro.months);
+    const costParts = [
+      p.country === "RO" ? "taxă 0 € la buget" : `taxe ~${fmt(r100(ro.tuition))} €`,
+      `trai ~${fmt(r100(ro.living))} €`,
+      ro.stipend ? `minus ~${fmt(r100(ro.stipend))} € primiți de la companie` : ""
+    ].filter(Boolean).join(" + ").replace(" + minus", ", minus");
     const meter = (label, val) => {
       const [t, cls, mcls] = chanceTag(val);
       return `<div class="chance-row"><div class="chance-label"><span>${label}</span><b>${val}% · <span class="tag tag-${cls}">${t}</span></b></div>
         <div class="meter ${mcls}"><span style="width:${val}%"></span></div></div>`;
     };
     const chances = p.country === "RO"
-      ? meter("Loc la buget", r.cb) + (r.feeOk ? meter("Loc cu taxă", r.ct) : `<p class="chance-label" style="margin-top:10px">Loc cu taxă: peste bugetul ales</p>`)
+      ? meter(p.feeEUR > 0 ? "Loc la buget" : "Șansă de admitere", r.cb) + (p.feeEUR > 0 ? (r.feeOk ? meter("Loc cu taxă", r.ct) : `<p class="chance-label" style="margin-top:10px">Loc cu taxă: peste bugetul ales</p>`) : "")
       : meter("Șansă de admitere", r.ca);
     let placesHtml = "";
     if (p.country === "RO") {
-      if (p.places && p.places.b != null) placesHtml = `<div class="fact"><b>Locuri ${p.verified ? "2026 (oficial)" : ""}</b>${fmt(p.places.b)} buget · ${fmt(p.places.t)} taxă</div>`;
+      if (p.places && p.places.b != null) placesHtml = `<div class="fact"><b>Locuri ${p.verified ? "2026 (oficial)" : ""}</b>${fmt(p.places.b)} buget${p.places.t != null ? ` · ${fmt(p.places.t)} taxă` : ""}</div>`;
       else placesHtml = `<div class="fact"><b>Locuri</b>${p.places ? p.places.note : "Verifică oferta oficială 2026"}</div>`;
     } else {
       placesHtml = `<div class="fact"><b>Termen</b>${p.deadline}</div>`;
     }
-    const langMap = { ro: "Română", en: "Engleză", "en-ro": "Engleză", de: "Germană", es: "Spaniolă", no: "Norvegiană", sv: "Suedeză" };
+    const langMap = LANGS;
     const scholar = COUNTRY_RESEARCH[p.country].scholarships[0].replace(/<[^>]+>/g, "").split(":")[0];
     return `
       <article class="prog">
@@ -1680,7 +2837,9 @@ const SOURCES = [
             <div class="prog-loc">${flag(p.country)}${c.name} · ${p.city}</div>
             <h3>${p.program}</h3>
             <p class="uni">${p.uni}</p>${p.fac ? `<p class="fac">${p.fac}</p>` : ""}
+            ${heartBtn(p.id)}
             <div class="badges">
+              ${p.level && p.level !== "licenta" ? `<span class="tag tag-level">${LEVELS[p.level].label}</span>` : ""}
               <span class="tag tag-neutral">${methodMap[p.method]}</span>
               <span class="tag tag-neutral">Limba: ${langMap[p.lang]}</span>
               ${r.overBudget ? `<span class="tag tag-low">Peste buget</span>` : ""}
@@ -1690,8 +2849,16 @@ const SOURCES = [
         </div>
         <div class="prog-facts">
           ${placesHtml}
-          <div class="fact"><b>Taxă anuală (UE)</b>${p.country === "RO" ? "0 lei la buget · " : ""}${p.feeText}</div>
+          <div class="fact"><b>Taxă anuală (UE)</b>${p.country === "RO" && p.feeEUR > 0 ? "0 lei la buget · " : ""}${p.feeText}</div>
           <div class="fact"><b>Cost de trai</b>${c.living}</div>
+        </div>
+        <div class="roi">
+          <div class="roi-item"><b>Salariu net estimat</b>${salaryText(ro)}
+            <small>${ro.where}, ${p.salary ? "pentru această calificare" : "domeniul " + byId(DOMAINS, ro.dom).label}${p.country !== "RO" && !ro.abroad ? " (dacă te întorci în țară)" : ""}</small></div>
+          <div class="roi-item"><b>Investiție totală</b>~${fmt(r100(ro.total))} € în ${yrs(ro.y)}
+            <small>${costParts}${ro.extraFee ? `; pe loc cu taxă, încă ~${fmt(r100(ro.extraFee))} €` : ""}${p.needBlind ? "; calcul fără ajutorul financiar al universității" : ""}</small></div>
+          <div class="roi-item"><b>Recuperarea investiției</b>${ro.total ? `≈ ${Math.round(ro.months)} luni de salariu net` : "cost aproape zero"}
+            <small><span class="tag tag-${roiCls}">${ro.total ? roiLabel : "Recuperare rapidă"}</span></small></div>
         </div>
         ${r.notes.length ? `<ul class="warn-list">${r.notes.map(n => `<li class="${n.good ? "good" : ""}">${n.t}</li>`).join("")}</ul>` : ""}
         <details class="more"><summary>Cum se intră și ce burse există</summary>
@@ -1710,7 +2877,7 @@ const SOURCES = [
     if (!ro.length) return "";
     return `<div class="r-full"><h4>Locuri la buget și la taxă (admitere 2026) pentru programele tale</h4>
       <div class="ro-table-wrap"><table class="ro-table"><thead><tr><th>Program</th><th>Universitate</th><th style="text-align:right">Buget</th><th style="text-align:right">Taxă</th><th>Mod de admitere</th></tr></thead><tbody>
-      ${ro.map(r => `<tr><td>${r.p.program}</td><td>${r.p.uni.replace("Universitatea Națională de Știință și Tehnologie ", "")}</td><td class="num">${fmt(r.p.places.b)}</td><td class="num">${fmt(r.p.places.t)}</td><td>${{ dosar: "Dosar", examen: "Examen", mixt: "Mixt", vocational: "Vocațional" }[r.p.method]}</td></tr>`).join("")}
+      ${ro.map(r => `<tr><td>${r.p.program}</td><td>${r.p.uni.replace("Universitatea Națională de Știință și Tehnologie ", "")}</td><td class="num">${fmt(r.p.places.b)}</td><td class="num">${r.p.places.t != null ? fmt(r.p.places.t) : "–"}</td><td>${{ dosar: "Dosar", examen: "Examen", mixt: "Mixt", vocational: "Vocațional" }[r.p.method]}</td></tr>`).join("")}
       </tbody></table></div></div>`;
   }
 
@@ -1725,6 +2892,8 @@ const SOURCES = [
         <div class="r-full"><h4>Burse și sprijin financiar</h4><ul>${R.scholarships.map(s => `<li>${s}</li>`).join("")}</ul></div>
         <div><h4>Termene</h4><p>${R.deadlines}</p></div>
         <div><h4>Unde aplici</h4><p><a href="${c.portal.url}" target="_blank" rel="noopener">${c.portal.label} ↗</a></p></div>
+        <div class="r-full"><h4>Birocrație, pe scurt</h4><ol class="paper">${R.paperwork.map(s => `<li>${s}</li>`).join("")}</ol>
+          <p class="r-note">Cu Ariadna (Premium) primești lista completă de acte, în ordine, cu termene, modele de cereri și memento-uri. <a href="#premium">Vezi ce face Ariadna</a></p></div>
         ${code === "RO" ? roTable(list) : ""}
         <div class="r-full tip"><b>Sfat UniFinder:</b> ${R.tip}</div>
       </div>`;
@@ -1742,6 +2911,33 @@ const SOURCES = [
       </aside>`;
   }
 
+  // text simplu pentru părinți: primele opțiuni, șansele și costurile
+  function parentSummary(list) {
+    const lines = [
+      "UniFinder Global – rezumat pentru părinți",
+      "",
+      `Profil: ${byId(PROFILES, S.profile).label}, clasa a ${S.clasa === "11" ? "XI" : "XII"}-a. Indice academic estimat: ${academicIndex().toFixed(2)} din 10.`,
+      `Domenii alese: ${S.domains.map(d => byId(DOMAINS, d).label).join(", ")}.`,
+      `Buget pentru taxa de studii: ${byId(BUDGETS, S.budget).label.toLowerCase()}.`,
+      "",
+      list.length ? "Primele opțiuni, în ordinea potrivirii:" : "Deocamdată nicio opțiune nu se potrivește tuturor filtrelor."
+    ];
+    list.slice(0, 5).forEach((r, i) => {
+      const p = r.p, ro = r.roi;
+      const ch = p.country === "RO"
+        ? (p.feeEUR > 0 ? `${r.cb}% la buget` + (r.feeOk ? `, ${r.ct}% cu taxă` : "") : `${r.cb}%`)
+        : `${r.ca}%`;
+      lines.push("", `${i + 1}. ${p.program} – ${p.uni} (${COUNTRIES[p.country].name}, ${p.city})`);
+      lines.push(`   Șanse estimate de admitere: ${ch}. ${METHOD[p.method]}.`);
+      lines.push(`   Cost total estimat: ~${fmt(r100(ro.total))} € în ${yrs(ro.y)} (taxe și trai)` + (ro.extraFee ? `; pe loc cu taxă, încă ~${fmt(r100(ro.extraFee))} €.` : "."));
+      lines.push(`   Salariu net estimat după absolvire (${ro.where}): ${salaryText(ro)}.`);
+      if (ro.total) lines.push(`   Costul studiilor înseamnă aproximativ ${Math.round(ro.months)} luni de salariu net de început.`);
+      if (p.deadline) lines.push(`   Termen de aplicare: ${p.deadline}.`);
+    });
+    lines.push("", "Procentele, costurile și salariile sunt estimări orientative. Înainte de orice decizie, verificați site-urile oficiale ale instituțiilor.");
+    return lines.join("\n");
+  }
+
   function renderResults() {
     const all = resultsCache;
     let list = all.filter(r => S.showOver || !r.overBudget);
@@ -1749,7 +2945,8 @@ const SOURCES = [
     const sorters = {
       fit: (a, b) => b.rank - a.rank,
       chance: (a, b) => b.main - a.main,
-      cost: (a, b) => a.p.feeEUR - b.p.feeEUR
+      cost: (a, b) => a.p.feeEUR - b.p.feeEUR,
+      roi: (a, b) => a.roi.months - b.roi.months
     };
     list.sort(sorters[view.sort]);
     const hiddenOver = all.filter(r => r.overBudget).length;
@@ -1759,13 +2956,20 @@ const SOURCES = [
     $("#results").innerHTML = `
       <div class="wrap">
         <div class="res-head">
-          <div><p class="step-kicker">Rezultatele tale</p><h2>Facultățile potrivite pentru tine</h2></div>
+          <div><p class="step-kicker">Rezultatele tale</p><h2>Programele potrivite pentru tine</h2></div>
           <div class="res-actions">
             <button class="btn btn-ghost" data-act="edit">✎ Modifică răspunsurile</button>
+            <button class="btn btn-ghost" data-act="parent" aria-expanded="${view.parent}">Rezumat pentru părinți</button>
             <button class="btn btn-small" data-act="restart">Refă testul</button>
           </div>
         </div>
         ${profileSummary()}
+        <section class="parent-panel" id="parent-panel" ${view.parent ? "" : "hidden"}>
+          <h3>Rezumat pentru părinți</h3>
+          <p>Un text scurt, pe înțelesul părinților, cu primele tale opțiuni, șansele, costurile și salariile estimate. Nimic nu se trimite automat: îl copiezi și îl dai mai departe doar dacă vrei.</p>
+          <textarea id="parent-text" readonly rows="14" aria-label="Rezumat pentru părinți"></textarea>
+          <div class="parent-actions"><button class="btn btn-primary" data-act="copy-parent">Copiază textul</button><span id="copy-status" role="status"></span></div>
+        </section>
         ${ariadnaBanner(list[0])}
         <div class="res-toolbar">
           <div class="seg" role="group" aria-label="Filtrează după țară">
@@ -1775,12 +2979,13 @@ const SOURCES = [
           <div class="seg" role="group" aria-label="Sortează">
             <button data-sort="fit" class="${view.sort === "fit" ? "on" : ""}">Potrivire</button>
             <button data-sort="chance" class="${view.sort === "chance" ? "on" : ""}">Șanse</button>
-            <button data-sort="cost" class="${view.sort === "cost" ? "on" : ""}">Cost</button>
+            <button data-sort="cost" class="${view.sort === "cost" ? "on" : ""}">Taxă</button>
+            <button data-sort="roi" class="${view.sort === "roi" ? "on" : ""}">Recuperare</button>
           </div>
         </div>
         <p class="res-count">${list.length} programe găsite${hiddenOver && !S.showOver ? ` · ${hiddenOver} ascunse pentru că depășesc bugetul — <a href="#" data-act="over">arată-le</a>` : ""}${S.showOver && hiddenOver ? ` · <a href="#" data-act="over">ascunde programele peste buget</a>` : ""}${langHidden ? ` · ${langHidden} ascunse pentru că se predau într-o limbă pe care nu o știi încă (poți schimba asta la ultimul pas)` : ""}</p>
         <div class="prog-list">
-          ${list.length ? list.map(progCard).join("") : `<div class="empty"><p><b>Niciun program nu se potrivește tuturor filtrelor.</b></p><p>Încearcă să adaugi un domeniu sau o țară, să mărești bugetul sau să accepți să înveți limba țării.</p><button class="btn btn-primary" data-act="edit">Modifică răspunsurile</button></div>`}
+          ${list.length ? list.map(progCard).join("") : `<div class="empty"><p><b>Niciun program nu se potrivește tuturor filtrelor.</b></p><p>Încearcă să adaugi un domeniu, o țară sau un tip de studii, să mărești bugetul sau să accepți să înveți limba țării.</p><button class="btn btn-primary" data-act="edit">Modifică răspunsurile</button></div>`}
         </div>
 
         <section class="research" aria-labelledby="research-title">
@@ -1792,46 +2997,234 @@ const SOURCES = [
           <div class="research-panel" role="tabpanel">${researchPanel(view.tab, all)}</div>
         </section>
 
+        <section class="research" aria-labelledby="sch-title">
+          <p class="step-kicker">Burse pentru tine</p>
+          <h2 id="sch-title">Ce burse poți primi și de ce</h2>
+          <p class="section-sub">Pentru țările alese, îți spunem la fiecare bursă dacă ești eligibil(ă), ce trebuie verificat sau de ce nu se aplică în cazul tău.</p>
+          ${scholarshipsHTML(countriesWith)}
+        </section>
+
+        <section class="research" aria-labelledby="tl-title">
+          <p class="step-kicker">Calendarul tău</p>
+          <h2 id="tl-title">Termenele tale, lună cu lună</h2>
+          <p class="section-sub">Toate datele importante pentru țările alese, ${S.clasa === "11" ? "pentru anul în care vei fi în clasa a XII-a" : "pentru admiterea din 2027"}, în ordine.</p>
+          ${timelineHTML(countriesWith)}
+          <textarea id="tl-text" class="sr-only" readonly aria-hidden="true" tabindex="-1">${timelineText(countriesWith)}</textarea>
+          <div class="parent-actions"><button class="btn btn-ghost" data-act="copy-tl">Copiază calendarul</button><span id="tl-status" role="status"></span></div>
+        </section>
+
         <div class="method-note">
           <h3>Cum calculăm șansele</h3>
           <p>Pornim de la indicele tău academic (media de bac și mediile de liceu; dacă nu ai dat încă bacul, îl estimăm). La programele cu examen contează mai mult nivelul de pregătire declarat, iar olimpiadele, potrivirea cu materiile preferate, profilul și certificatele de limbă pot crește sau scădea scorul. Rezultatul îl comparăm cu un <b>prag estimat</b> pentru fiecare program, stabilit după concurența și ultimele medii cunoscute. Procentele sunt <b>orientative</b>, nu o garanție. Numărul de locuri la buget și la taxă provine din documentele oficiale 2026; regulamentele se schimbă în fiecare an, așa că verifică-le înainte să aplici.</p>
+          <h3>Cum calculăm salariile și recuperarea investiției</h3>
+          <p>Salariile sunt <b>estimări orientative</b> pe domenii, pentru România, pornind de la date publice din 2026 (salariul mediu net pe economie, mediile pe domenii publicate de platformele de recrutare și grilele din sănătate și educație). Pentru alte țări le înmulțim cu un raport aproximativ între salariile de început din țara respectivă și cele din România. <b>Investiția totală</b> înseamnă taxele de școlarizare plus costul de trai pe toată durata studiilor (10 luni pe an în România, 12 în străinătate; în România calculăm pe loc la buget). <b>Recuperarea</b> arată câte luni de salariu net de început înseamnă această sumă. Nu este o promisiune: salariul real depinde de oraș, angajator și de tine.</p>
           <details class="sources"><summary><b>Surse consultate (${SOURCES.length})</b></summary>
             <ol>${SOURCES.map(([t, u]) => `<li><a href="${u}" target="_blank" rel="noopener">${t}</a></li>`).join("")}</ol></details>
         </div>
       </div>`;
+    $("#parent-text").value = parentSummary(all.filter(r => !r.overBudget).sort(sorters.fit));
   }
 
   $("#results").addEventListener("click", e => {
     const b = e.target.closest("button, a");
-    if (!b) return;
+    if (!b || b.dataset.save) return;
     if (b.dataset.country) { view.country = b.dataset.country; renderResults(); }
     else if (b.dataset.sort) { view.sort = b.dataset.sort; renderResults(); }
     else if (b.dataset.tab) { view.tab = b.dataset.tab; renderResults(); $("#research-title").scrollIntoView({ block: "nearest" }); }
     else if (b.dataset.act === "over") { e.preventDefault(); S.showOver = !S.showOver; save(); renderResults(); }
     else if (b.dataset.act === "edit") { S.step = 0; save(); startQuiz(false); }
     else if (b.dataset.act === "restart") startQuiz(true);
-    else if (b.dataset.act === "print") {
-      document.querySelectorAll("details.more").forEach(d => d.open = true);
-      window.print();
+    else if (b.dataset.act === "parent") {
+      view.parent = !view.parent; renderResults();
+      if (view.parent) $("#parent-panel").scrollIntoView({ block: "nearest" });
     }
+    else if (b.dataset.act === "copy-parent") copyFrom($("#parent-text"), $("#copy-status"), "Copiat. Lipește-l într-un mesaj pentru părinți.");
   });
 
-  // ───────────── secțiunea „Țări” de pe prima pagină ─────────────
-  const short = {
-    RO: ["Locuri la buget gratuite", "Dosar sau examen (grilă)"],
-    NL: ["2.694 €/an (taxa UE 2026–27)", "Dosar + engleză; numerus fixus cu selecție"],
-    DE: ["0 € taxă, doar contribuție semestrială", "Dosar; majoritatea programelor în germană (C1)"],
-    ES: ["~700–2.500 €/an", "UNEDasiss + PCE, notă de admitere până la 14"],
-    NO: ["0 € pentru cetățenii UE", "Samordna opptak; norvegiană B2"],
-    SE: ["0 € pentru cetățenii UE", "universityadmissions.se; termen 15 ianuarie"],
-    US: ["~30.000–65.000 $/an; MIT oferă ajutor complet", "Holistică: note, SAT, eseuri, recomandări"]
-  };
+  // ───────────── „Lista mea”: inimioare, bara de jos și comparația ─────────────
+  function heartBtn(id) {
+    const on = saved.includes(id);
+    return `<button type="button" class="heart ${on ? "on" : ""}" data-save="${id}" aria-pressed="${on}" aria-label="${on ? "Scoate din Lista mea" : "Salvează în Lista mea"}">${on ? "♥ Salvat" : "♡ Salvează"}</button>`;
+  }
+  function refreshHearts() {
+    document.querySelectorAll("[data-save]").forEach(b => { b.outerHTML = heartBtn(b.dataset.save); });
+    const bar = $("#saved-bar");
+    bar.hidden = !saved.length;
+    $("#saved-count").textContent = `♥ ${saved.length} ${saved.length === 1 ? "salvat" : "salvate"}`;
+    $("#saved-compare").disabled = saved.length < 2;
+    if (!$("#compare").hidden) renderCompare();
+  }
+  function toggleSave(id) {
+    saved = saved.includes(id) ? saved.filter(x => x !== id) : [...saved, id];
+    saveSaved(); refreshHearts();
+  }
+
+  function renderCompare() {
+    const ids = saved.slice(0, 4);
+    const domainPct = Object.fromEntries(domainScores().map(x => [x.d.id, x.pct]));
+    const rows = ids.map(id => {
+      const p = progById(id), ro = roi(p);
+      const ev = quizDone() ? evaluate(p, domainPct) : null;
+      const chance = !ev ? "Fă chestionarul ca să vezi șansele" :
+        p.country === "RO" ? (p.feeEUR > 0 ? `${ev.cb}% la buget · ${ev.ct}% cu taxă` : `${ev.cb}%`) : `${ev.ca}%`;
+      const places = p.places && p.places.b != null ? `${fmt(p.places.b)} buget${p.places.t != null ? ` · ${fmt(p.places.t)} taxă` : ""}` : (p.deadline || "verifică pe site");
+      return { p, cells: [
+        `${flag(p.country)} ${COUNTRIES[p.country].name}, ${p.city}`,
+        p.level && p.level !== "licenta" ? LEVELS[p.level].label : "Licență",
+        LANGS[p.lang], METHOD[p.method], chance, p.feeText, yrs(ro.y),
+        `~${fmt(r100(ro.total))} €`, salaryText(ro), ro.total ? `≈ ${Math.round(ro.months)} luni` : "cost aproape zero", places
+      ] };
+    });
+    const labels = ["Țara și orașul", "Tip de studii", "Limba", "Admitere", "Șanse estimate", "Taxă anuală", "Durată", "Investiție totală", "Salariu net estimat", "Recuperare", "Locuri / termen"];
+    $("#compare").innerHTML = `
+      <div class="wrap">
+        <div class="res-head"><div><p class="step-kicker">Lista mea</p><h2>Compară programele salvate</h2></div>
+          <button class="btn btn-ghost" data-act="close-compare">Închide comparația</button></div>
+        ${saved.length > 4 ? `<p class="section-sub">Comparăm primele 4 programe din listă. Scoate unul (♥) ca să vezi altul.</p>` : ""}
+        ${ids.length < 2 ? `<div class="empty"><p>Salvează cel puțin două programe (butonul „♡ Salvează”) ca să le compari.</p></div>` : `
+        <div class="cmp-wrap"><table class="cmp">
+          <thead><tr><th scope="col"></th>${rows.map(r => `<th scope="col"><span class="cmp-name">${r.p.program}</span><span class="cmp-uni">${r.p.uni}</span>${heartBtn(r.p.id)}</th>`).join("")}</tr></thead>
+          <tbody>${labels.map((l, i) => `<tr><th scope="row">${l}</th>${rows.map(r => `<td>${r.cells[i]}</td>`).join("")}</tr>`).join("")}</tbody>
+        </table></div>`}
+        <p class="r-note">Costurile, salariile și șansele sunt estimări orientative. Verifică pe site-urile oficiale înainte să aplici.</p>
+      </div>`;
+  }
+  function openCompare() {
+    $("#compare").hidden = false; renderCompare();
+    $("#compare").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // ───────────── catalogul: toate programele, cu căutare și filtre ─────────────
+  const cat = { q: "", country: "", domain: "", level: "", fee: "", shown: 24 };
+  function catalogCard(p) {
+    const c = COUNTRIES[p.country];
+    return `
+      <article class="cat-card">
+        <div class="prog-loc">${flag(p.country)}${c.name} · ${p.city}</div>
+        <h3>${p.program}</h3>
+        <p class="uni">${p.uni}</p>
+        <div class="badges">
+          ${p.level && p.level !== "licenta" ? `<span class="tag tag-level">${LEVELS[p.level].label}</span>` : ""}
+          <span class="tag tag-neutral">${METHOD[p.method]}</span>
+          <span class="tag tag-neutral">${LANGS[p.lang]}</span>
+        </div>
+        <p class="cat-fee"><b>Taxă:</b> ${p.feeText}</p>
+        ${p.places && p.places.b != null ? `<p class="cat-fee"><b>Locuri 2026:</b> ${fmt(p.places.b)} buget${p.places.t != null ? ` · ${fmt(p.places.t)} taxă` : ""}</p>` : p.deadline ? `<p class="cat-fee"><b>Termen:</b> ${p.deadline}</p>` : ""}
+        <div class="cat-actions">${heartBtn(p.id)}<a href="${p.url}" target="_blank" rel="noopener">Site oficial ↗</a></div>
+      </article>`;
+  }
+  function renderCatalog() {
+    const q = cat.q.trim().toLowerCase();
+    const list = PROGRAMS.filter(p =>
+      (!cat.country || p.country === cat.country) &&
+      (!cat.domain || p.domains.includes(cat.domain)) &&
+      (!cat.level || (p.level || "licenta") === cat.level) &&
+      (!cat.fee || p.feeEUR <= +cat.fee) &&
+      (!q || [p.program, p.uni, p.city, p.fac, COUNTRIES[p.country].name].join(" ").toLowerCase().includes(q))
+    );
+    $("#cat-count").textContent = `${list.length} ${list.length === 1 ? "program" : "programe"}`;
+    $("#cat-list").innerHTML = list.length
+      ? list.slice(0, cat.shown).map(catalogCard).join("")
+      : `<div class="empty"><p>Niciun program nu se potrivește căutării. Încearcă alte filtre.</p></div>`;
+    $("#cat-more").hidden = list.length <= cat.shown;
+  }
+  function initCatalog() {
+    const opt = (v, l) => `<option value="${v}">${l}</option>`;
+    $("#cat-country").innerHTML = opt("", "Toate țările") + Object.entries(COUNTRIES).map(([id, c]) => opt(id, `${c.name} (${PROGRAMS.filter(p => p.country === id).length})`)).join("");
+    $("#cat-domain").innerHTML = opt("", "Toate domeniile") + DOMAINS.map(d => opt(d.id, d.label)).join("");
+    $("#cat-level").innerHTML = opt("", "Toate tipurile") + Object.entries(LEVELS).map(([id, l]) => opt(id, l.label)).join("");
+    $("#cat-fee").innerHTML = opt("", "Orice taxă") + [[0, "Gratuit (0 €)"], [500, "Până la 500 €/an"], [3000, "Până la 3.000 €/an"], [10000, "Până la 10.000 €/an"]].map(([v, l]) => opt(v, l)).join("");
+    const bind = (id, key) => $(id).addEventListener("input", e => { cat[key] = e.target.value; cat.shown = 24; renderCatalog(); });
+    bind("#cat-q", "q"); bind("#cat-country", "country"); bind("#cat-domain", "domain"); bind("#cat-level", "level"); bind("#cat-fee", "fee");
+    $("#cat-more").addEventListener("click", () => { cat.shown += 24; renderCatalog(); });
+    renderCatalog();
+  }
+
+  // ───────────── burse, cu explicația eligibilității ─────────────
+  const OK_LABEL = { da: ["Eligibil(ă)", "high"], poate: ["Verifică condițiile", "mid"], nu: ["Nu ești eligibil(ă)", "vlow"] };
+  function scholarshipList(countries) {
+    const set = new Set(countries);
+    return SCHOLARSHIPS.filter(s => set.has(s.country) || (s.country === "EU" && [...set].some(c => c !== "US" && c !== "CA" && c !== "GB" && c !== "CH")))
+      .map(s => ({ s, r: s.rule(S) }))
+      .sort((a, b) => ["da", "poate", "nu"].indexOf(a.r.ok) - ["da", "poate", "nu"].indexOf(b.r.ok));
+  }
+  function scholarshipsHTML(countries) {
+    const list = scholarshipList(countries);
+    if (!list.length) return `<div class="empty"><p>Nu avem burse înregistrate pentru țările alese.</p></div>`;
+    return `<div class="sch-grid">${list.map(({ s, r }) => {
+      const [lab, cls] = OK_LABEL[r.ok];
+      return `<article class="sch ${r.ok}">
+        <div class="sch-top"><span class="prog-loc">${s.country === "EU" ? "Uniunea Europeană" : flag(s.country) + COUNTRIES[s.country].name}</span><span class="tag tag-${cls}">${lab}</span></div>
+        <h4>${s.name}</h4>
+        <p class="sch-amt">${s.amount}</p>
+        <p>${r.why}</p>
+        <a href="${s.url}" target="_blank" rel="noopener">Detalii oficiale ↗</a>
+      </article>`;
+    }).join("")}</div>`;
+  }
+
+  // ───────────── calendarul personal de termene ─────────────
+  const MONTHS = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"];
+  function timelineEvents(countries) {
+    const shift = S.clasa === "11" ? 1 : 0;
+    const keys = ["ALL", ...countries];
+    const needEN = countries.some(c => ["NL", "SE", "DK", "GB", "IE", "US", "CA"].includes(c)) && !["c1", "c2", "ielts"].includes(S.english);
+    if (needEN) keys.push("EN");
+    if (countries.includes("FR") && S.french !== "b2") keys.push("FRLANG");
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    return keys.flatMap(k => (TIMELINE[k] || []).map(e => {
+      const [y, m, d] = e.d.split("-").map(Number);
+      return { date: new Date(y + shift, m - 1, d), t: e.t, c: k };
+    })).filter(e => e.date >= today).sort((a, b) => a.date - b.date);
+  }
+  function timelineHTML(countries) {
+    const ev = timelineEvents(countries);
+    if (!ev.length) return `<div class="empty"><p>Nu mai sunt termene în calendarul acestui an.</p></div>`;
+    const groups = [];
+    ev.forEach(e => {
+      const key = `${MONTHS[e.date.getMonth()]} ${e.date.getFullYear()}`;
+      if (!groups.length || groups[groups.length - 1].key !== key) groups.push({ key, items: [] });
+      groups[groups.length - 1].items.push(e);
+    });
+    return `<ol class="tl">${groups.map(g => `<li><h4>${g.key}</h4><ul>${g.items.map(e =>
+      `<li><span class="tl-day">${e.date.getDate()}</span>${COUNTRIES[e.c] ? flag(e.c) : ""}<span>${e.t}</span></li>`).join("")}</ul></li>`).join("")}</ol>`;
+  }
+  function timelineText(countries) {
+    return "Calendarul meu de admitere – UniFinder Global\n\n" + timelineEvents(countries)
+      .map(e => `${e.date.getDate()} ${MONTHS[e.date.getMonth()]} ${e.date.getFullYear()}: ${e.t}`).join("\n")
+      + "\n\nDatele sunt orientative; verifică termenele exacte pe site-urile oficiale.";
+  }
+
+  function copyFrom(ta, st, okMsg) {
+    const fallback = () => { ta.focus(); ta.select(); st.textContent = "Textul este selectat: apasă Ctrl+C (sau „Copiază” pe telefon)."; };
+    try { navigator.clipboard.writeText(ta.value).then(() => { st.textContent = okMsg; }, fallback); } catch (err) { fallback(); }
+  }
+
+  // clicuri comune pentru inimioare și comparație, oriunde apar pe pagină
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-save], [data-act=open-compare], [data-act=close-compare], [data-act=copy-tl]");
+    if (!b) return;
+    if (b.dataset.save) toggleSave(b.dataset.save);
+    else if (b.dataset.act === "open-compare") openCompare();
+    else if (b.dataset.act === "close-compare") { $("#compare").hidden = true; }
+    else if (b.dataset.act === "copy-tl") copyFrom($("#tl-text"), $("#tl-status"), "Copiat. Îl poți lipi în notițe sau în calendar.");
+  });
+
+  // ───────────── secțiunile de pe prima pagină ─────────────
   $("#country-grid").innerHTML = Object.entries(COUNTRIES).map(([id, c]) => `
     <div class="country-card"><h3>${flag(id)}${c.name}</h3>
-      <p><strong>Taxe:</strong> ${short[id][0]}</p>
-      <p><strong>Admitere:</strong> ${short[id][1]}</p>
+      <p><strong>Taxe:</strong> ${c.short[0]}</p>
+      <p><strong>Admitere:</strong> ${c.short[1]}</p>
       <p><strong>Trai:</strong> ${c.living}</p></div>`).join("");
   $("#stat-programs").textContent = PROGRAMS.length;
+  $("#stat-countries").textContent = Object.keys(COUNTRIES).length;
+  $("#stat-scholarships").textContent = SCHOLARSHIPS.length;
+  initCatalog();
+  const schSel = $("#sch-country");
+  schSel.innerHTML = Object.entries(COUNTRIES).map(([id, c]) => `<option value="${id}">${c.name}</option>`).join("");
+  const renderSch = () => { $("#sch-list").innerHTML = scholarshipsHTML([schSel.value]); };
+  schSel.addEventListener("input", renderSch); renderSch();
+  refreshHearts();
   $("#premium-cta").addEventListener("click", () => { $("#premium-msg").hidden = false; });
   document.querySelectorAll("[data-flag]").forEach(el => { el.outerHTML = flag(el.dataset.flag); });
 
